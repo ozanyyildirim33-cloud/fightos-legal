@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FightOS — Gizlilik Politikası / Privacy Policy</title>
+<style>
+  :root {
+    --ink: #1a1a1f;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --accent: #ff2e4c;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; }
+  .brand span { color: var(--accent); }
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-btn {
+    border: 1px solid var(--line);
+    background: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 32px; }
+  h1 { font-size: 28px; margin: 24px 0 4px; }
+  h2 { font-size: 18px; margin: 32px 0 10px; }
+  p, li { color: #374151; font-size: 15px; }
+  ul { padding-left: 20px; }
+  .notice {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #9a3412;
+    margin-bottom: 28px;
+  }
+  a { color: var(--accent); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+  .lang-block { display: none; }
+  .lang-block.visible { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Fight<span>OS</span></div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+  </header>
+
+  <!-- ================= TÜRKÇE ================= -->
+  <div class="lang-block visible" id="block-tr">
+    <div class="notice">
+      Bu belge FightOS ekibi tarafından hazırlanmıştır ve resmi bir hukuki danışmanlık yerine geçmez. Uygulamayı mağazalara sunmadan önce bir avukata gözden geçirtmen önerilir.
+    </div>
+    <h1>Gizlilik Politikası</h1>
+    <p class="updated">Son güncelleme: 24 Eylül 2026</p>
+
+    <p>FightOS ("uygulama", "biz") olarak gizliliğine önem veriyoruz. Bu politika, uygulamayı kullanırken hangi bilgileri topladığımızı, bunları nasıl kullandığımızı ve haklarını açıklar.</p>
+
+    <h2>1. Topladığımız Bilgiler</h2>
+    <ul>
+      <li><strong>Hesap bilgileri:</strong> E-posta adresin ve şifren (Supabase Auth aracılığıyla güvenli şekilde saklanır), kendi belirlediğin görünen ad ve nick. Apple veya Google ile giriş yaparsan, bu hizmetlerin paylaştığı e-posta adresini ve (paylaşılırsa) adını alırız; Apple'da "E-postamı Gizle"yi seçersen Apple'ın oluşturduğu aktarma adresi kullanılır. Apple ve Google şifreni bizimle paylaşmaz.</li>
+      <li><strong>Antrenman verileri:</strong> Tamamladığın raund sayısı, seçtiğin disiplin, antrenman süresi ve tahmini performans metrikleri.</li>
+      <li><strong>Abonelik bilgileri:</strong> Aboneliğinin aktif olup olmadığı bilgisi. Kredi kartı bilgilerine biz hiçbir zaman erişmeyiz — ödemeler doğrudan Apple veya Google üzerinden işlenir.</li>
+      <li><strong>Sesli koç metinleri:</strong> AI koçun seslendirdiği kısa antrenman komutları, sesi üretmek için ElevenLabs'a iletilir. Bu metinler kişisel bilgi içermez.</li>
+    </ul>
+
+    <h2>2. Bilgileri Nasıl Kullanıyoruz</h2>
+    <p>Topladığımız bilgileri yalnızca; hesabını yönetmek, antrenman geçmişini ve ilerlemeni göstermek, aboneliğini doğrulamak ve AI sesli koçu çalıştırmak için kullanırız. Bilgilerini üçüncü taraflara satmayız.</p>
+
+    <h2>3. Üçüncü Taraf Servisler</h2>
+    <p>Uygulama şu servisleri kullanır:</p>
+    <ul>
+      <li><strong>Supabase</strong> — hesap yönetimi ve veritabanı</li>
+      <li><strong>Apple ve Google</strong> — "Apple ile giriş" ve "Google ile giriş" seçenekleri (kimlik doğrulama)</li>
+      <li><strong>ElevenLabs</strong> — sesli koç için ses üretimi</li>
+      <li><strong>RevenueCat</strong> — abonelik ve satın alma yönetimi</li>
+    </ul>
+    <p>Bu servisler kendi gizlilik politikalarına tabidir.</p>
+
+    <h2>4. Reklam ve Takip</h2>
+    <p>FightOS'ta reklam yoktur ve üçüncü taraf reklam takip sistemleri kullanılmaz.</p>
+
+    <h2>5. Veri Güvenliği</h2>
+    <p>Verilerin, sektör standardı şifreleme ve erişim kontrolleriyle korunur. Ancak internet üzerinden hiçbir aktarımın %100 güvenli olmadığını unutma.</p>
+
+    <h2>6. Veri Saklama ve Hesap Silme</h2>
+    <p>Hesabını silmek istersen <a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a> adresinden bizimle iletişime geçebilirsin. Talebin makul bir süre içinde işleme alınır.</p>
+
+    <h2>7. Çocukların Gizliliği</h2>
+    <p>FightOS, 13 yaşın altındaki çocuklar için tasarlanmamıştır ve onlardan bilerek veri toplamayız.</p>
+
+    <h2>8. Haklarınız</h2>
+    <p>Verilerine erişme, düzeltme veya silme hakkına sahipsin. Bu haklarını kullanmak için bizimle iletişime geçebilirsin.</p>
+
+    <h2>9. Değişiklikler</h2>
+    <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde seni uygulama içinden bilgilendireceğiz.</p>
+
+    <h2>10. İletişim</h2>
+    <p><a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+  <div class="lang-block" id="block-en">
+    <div class="notice">
+      This document was drafted by the FightOS team and does not constitute formal legal advice. We recommend having it reviewed by a lawyer before submitting the app to the stores.
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: September 24, 2026</p>
+
+    <p>At FightOS ("the app", "we"), we take your privacy seriously. This policy explains what information we collect while you use the app, how we use it, and your rights.</p>
+
+    <h2>1. Information We Collect</h2>
+    <ul>
+      <li><strong>Account information:</strong> Your email and password (securely stored via Supabase Auth), your self-chosen display name and nickname. If you sign in with Apple or Google, we receive the email address (and, if shared, the name) those services provide; if you choose "Hide My Email" with Apple, the relay address Apple generates is used. Apple and Google never share your password with us.</li>
+      <li><strong>Workout data:</strong> Rounds completed, discipline selected, workout duration, and estimated performance metrics.</li>
+      <li><strong>Subscription information:</strong> Whether your subscription is active. We never have access to your credit card details — payments are processed directly by Apple or Google.</li>
+      <li><strong>Voice coach text:</strong> Short workout cues spoken by the AI coach are sent to ElevenLabs to generate audio. This text contains no personal information.</li>
+    </ul>
+
+    <h2>2. How We Use Information</h2>
+    <p>We use the information we collect only to manage your account, show your workout history and progress, verify your subscription, and power the AI voice coach. We do not sell your information to third parties.</p>
+
+    <h2>3. Third-Party Services</h2>
+    <p>The app relies on the following services:</p>
+    <ul>
+      <li><strong>Supabase</strong> — account management and database</li>
+      <li><strong>Apple and Google</strong> — "Sign in with Apple" and "Sign in with Google" (authentication)</li>
+      <li><strong>ElevenLabs</strong> — voice generation for the AI coach</li>
+      <li><strong>RevenueCat</strong> — subscription and purchase management</li>
+    </ul>
+    <p>These services are governed by their own privacy policies.</p>
+
+    <h2>4. Advertising & Tracking</h2>
+    <p>FightOS contains no advertising and does not use third-party advertising trackers.</p>
+
+    <h2>5. Data Security</h2>
+    <p>Your data is protected with industry-standard encryption and access controls. However, no transmission over the internet is ever 100% secure.</p>
+
+    <h2>6. Data Retention & Account Deletion</h2>
+    <p>If you'd like to delete your account, contact us at <a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a>. Your request will be processed within a reasonable timeframe.</p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>FightOS is not designed for children under the age of 13, and we do not knowingly collect data from them.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>You have the right to access, correct, or delete your data. Contact us to exercise these rights.</p>
+
+    <h2>9. Changes</h2>
+    <p>We may update this policy from time to time. We will notify you in-app of any significant changes.</p>
+
+    <h2>10. Contact</h2>
+    <p><a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+  </div>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('block-tr').classList.toggle('visible', lang === 'tr');
+    document.getElementById('block-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+</script>
+</body>
+</html>
