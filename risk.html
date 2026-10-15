@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FightOS — Fiziksel Risk Bilgilendirmesi / Physical Risk Notice</title>
+<style>  :root { --ink: #1a1a1f; --muted: #6b7280; --line: #e5e7eb; --accent: #ff2e4c; --bg: #fafafa; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-btn { border: 1px solid var(--line); background: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
+  .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+  nav.docs { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  nav.docs[hidden] { display: none; }
+  nav.docs a { color: var(--muted); text-decoration: none; }
+  nav.docs a[aria-current] { color: var(--ink); font-weight: 700; }
+  .updated { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 6px; }
+  h2 { font-size: 18px; margin: 32px 0 10px; }
+  p, li, td { color: #374151; font-size: 15px; }
+  ul { padding-left: 20px; }
+  a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-size: 13px; }
+  td { font-size: 14px; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, td { display: block; min-width: 0; }
+    thead { display: none; }
+    tr { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; }
+    td { border: none; padding: 3px 0; }
+    td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+  }
+  .callout { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+  .callout strong { color: #be123c; }
+  .callout p { margin: 6px 0 0; }
+  blockquote { margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: white; border-radius: 0 12px 12px 0; font-style: italic; color: #374151; }
+  .lang-block { display: none; }
+  .lang-block.visible { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="index.html">Fight<span>OS</span></a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+  </header>
+  <nav class="docs" id="nav-tr"><a href="terms.html">Kullanım Koşulları</a> <a href="privacy.html">Gizlilik Politikası</a> <a href="aydinlatma.html">KVKK Aydınlatma Metni</a> <a href="prime.html">Prime Path Abonelik Koşulları</a> <a href="acik-riza.html">Açık Rıza Metni</a> <a href="risk.html" aria-current="page">Fiziksel Risk Bilgilendirmesi</a></nav>
+  <nav class="docs" id="nav-en" hidden><a href="terms.html#en">Terms of Use</a> <a href="privacy.html#en">Privacy Policy</a> <a href="aydinlatma.html#en">KVKK Privacy Notice</a> <a href="prime.html#en">Prime Path Subscription Terms</a> <a href="acik-riza.html#en">Explicit Consent</a> <a href="risk.html#en" aria-current="page">Physical Risk Notice</a></nav>
+  <div class="lang-block visible" id="block-tr">
+    <h1>Fiziksel Risk Bilgilendirmesi ve Beyan</h1>
+    <p class="updated">Son güncelleme: 15 Ekim 2026</p>
+    <p>FightOS'u kullanmaya başlamadan önce aşağıdaki bilgilendirmeyi okuman ve beyanı onaylaman istenir. Bu onay <a href="terms.html">Kullanım Koşulları</a>'ndan ayrı bir adımdır.</p>
+    <h2>Antrenmanların riskleri</h2>
+    <p>FightOS; boks, kickboks ve Muay Thai tekniklerine ve HIIT'e dayalı, yüksek eforlu antrenmanlar sunar. Antrenmanlar tek başına (ör. gölge boksu veya kum torbası ile) yapılacak şekilde tasarlanmıştır; ancak hızlı ve güçlü vuruş, tekme ve diz hareketleri ile yoğun kardiyo şu riskleri taşır:</p>
+    <ul>
+      <li>Burkulma, gerilme, kas ve eklem yaralanmaları,</li>
+      <li>El, bilek, dirsek, omuz ve diz yaralanmaları,</li>
+      <li>Aşırı yorgunluk, baş dönmesi ve bayılma,</li>
+      <li>Kalp ve dolaşım sistemiyle ilgili sorunlar,</li>
+      <li>Kum torbası gibi bir hedefe vurduğunda veya bir partnerle çalıştığında darbeye bağlı yaralanmalar (ör. sarsıntı).</li>
+    </ul>
+    <h2>Başlamadan önce</h2>
+    <ul>
+      <li>Kalp, tansiyon, astım, diyabet, eklem veya omurga sorunun varsa, hamileysen ya da yakın zamanda yaralanma veya ameliyat geçirdiysen hekimine danış.</li>
+      <li>Yeterli alanı olan, kaygan olmayan bir zeminde ve uygun ekipmanla (ör. el bandajı, eldiven) çalış; ısınmadan başlama ve su içmeyi ihmal etme.</li>
+    </ul>
+    <h2>Unutma</h2>
+    <ul>
+      <li>FightOS tıbbi tavsiye vermez; bir doktorun, fizyoterapistin veya profesyonel antrenörün yerine geçmez.</li>
+      <li>Kalori ve hedef nabız değerleri genel formüllerle hesaplanan tahminlerdir; hata içerebilir.</li>
+      <li>Göğüs ağrısı veya baskısı, nefes darlığı, baş dönmesi, bulantı, çarpıntı ya da keskin bir ağrı hissedersen antrenmanı hemen bırak. Belirtiler geçmezse 112'yi ara.</li>
+    </ul>
+    <h2>Beyan</h2>
+    <blockquote>Bu bilgilendirmeyi okudum. Antrenmanların yüksek eforlu fiziksel aktivite içerdiğini ve sakatlanma riski taşıdığını biliyorum. Sağlık durumumun antrenmana uygun olduğunu ya da gerekiyorsa bir hekime danıştığımı, FightOS'un tıbbi tavsiye vermediğini ve kendimi iyi hissetmediğimde antrenmanı bırakacağımı beyan ederim.</blockquote>
+  </div>
+  <div class="lang-block" id="block-en">
+    <h1>Physical Risk Notice and Declaration</h1>
+    <p class="updated">Last updated: October 15, 2026</p>
+    <p>Before you start using FightOS, you're asked to read the notice below and confirm the declaration. This is a step separate from the <a href="terms.html#en">Terms of Use</a>.</p>
+    <h2>Risks of the workouts</h2>
+    <p>FightOS offers high-intensity workouts based on boxing, kickboxing and Muay Thai techniques and HIIT. Workouts are designed to be done alone (e.g. shadowboxing or on a heavy bag), but fast and powerful punches, kicks and knees and intense cardio carry these risks:</p>
+    <ul>
+      <li>Sprains, strains, muscle and joint injuries,</li>
+      <li>Hand, wrist, elbow, shoulder and knee injuries,</li>
+      <li>Exhaustion, dizziness and fainting,</li>
+      <li>Heart and circulation problems,</li>
+      <li>Impact injuries (e.g. concussion) when striking a target such as a heavy bag or training with a partner.</li>
+    </ul>
+    <h2>Before you start</h2>
+    <ul>
+      <li>Talk to your doctor if you have a heart, blood pressure, asthma, diabetes, joint or spine condition, are pregnant, or have had a recent injury or surgery.</li>
+      <li>Train on a non-slip surface with enough space and suitable equipment (e.g. hand wraps, gloves); always warm up and stay hydrated.</li>
+    </ul>
+    <h2>Remember</h2>
+    <ul>
+      <li>FightOS does not give medical advice and does not replace a doctor, physiotherapist or professional trainer.</li>
+      <li>Calorie and target heart rate figures are estimates from general formulas and may be inaccurate.</li>
+      <li>If you feel chest pain or pressure, shortness of breath, dizziness, nausea, palpitations or sharp pain, stop immediately. If symptoms don't pass, call emergency services (112 in Turkey).</li>
+    </ul>
+    <h2>Declaration</h2>
+    <blockquote>I have read this notice. I understand that the workouts involve high-intensity physical activity and carry a risk of injury. I declare that my health allows me to train or that I have consulted a doctor where needed, that FightOS does not give medical advice, and that I will stop training if I feel unwell.</blockquote>
+  </div>
+</div>
+<script>
+  function setLang(lang) {
+    for (const l of ['tr', 'en']) {
+      document.getElementById('block-' + l).classList.toggle('visible', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      document.getElementById('nav-' + l).hidden = l !== lang;
+    }
+    document.documentElement.lang = lang;
+    history.replaceState(null, '', lang === 'en' ? '#en' : location.pathname);
+  }
+  if (location.hash === '#en') setLang('en');
+</script>
+</body>
+</html>

@@ -4,68 +4,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FightOS — Yasal Belgeler / Legal</title>
-<style>
-  :root {
-    --ink: #1a1a1f;
-    --muted: #6b7280;
-    --line: #e5e7eb;
-    --accent: #ff2e4c;
-    --bg: #fafafa;
-  }
+<style>  :root { --ink: #1a1a1f; --muted: #6b7280; --line: #e5e7eb; --accent: #ff2e4c; --bg: #fafafa; }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.65;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
-  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
   .brand span { color: var(--accent); }
   .lang-toggle { display: flex; gap: 6px; }
-  .lang-btn {
-    border: 1px solid var(--line);
-    background: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--muted);
-  }
+  .lang-btn { border: 1px solid var(--line); background: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
   .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
-  .updated { color: var(--muted); font-size: 13px; margin-bottom: 32px; }
-  h1 { font-size: 28px; margin: 24px 0 4px; }
+  nav.docs { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  nav.docs[hidden] { display: none; }
+  nav.docs a { color: var(--muted); text-decoration: none; }
+  nav.docs a[aria-current] { color: var(--ink); font-weight: 700; }
+  .updated { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 6px; }
   h2 { font-size: 18px; margin: 32px 0 10px; }
-  p, li { color: #374151; font-size: 15px; }
+  p, li, td { color: #374151; font-size: 15px; }
   ul { padding-left: 20px; }
-  .notice {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-size: 13px;
-    color: #9a3412;
-    margin-bottom: 28px;
-  }
   a { color: var(--accent); }
-  hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+  .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-size: 13px; }
+  td { font-size: 14px; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, td { display: block; min-width: 0; }
+    thead { display: none; }
+    tr { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; }
+    td { border: none; padding: 3px 0; }
+    td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+  }
+  .callout { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+  .callout strong { color: #be123c; }
+  .callout p { margin: 6px 0 0; }
+  blockquote { margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: white; border-radius: 0 12px 12px 0; font-style: italic; color: #374151; }
   .lang-block { display: none; }
   .lang-block.visible { display: block; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header><div class="brand">Fight<span>OS</span></div></header>
-  <h1>Yasal Belgeler <span style="opacity:.6">/ Legal</span></h1>
-  <p>FightOS için gizlilik politikası ve kullanım şartları. / Privacy policy and terms of service for FightOS.</p>
-  <ul>
-    <li><a href="privacy.html">Gizlilik Politikası / Privacy Policy</a></li>
-    <li><a href="terms.html">Kullanım Şartları / Terms of Service</a></li>
-  </ul>
-  <p>İletişim / Contact: <a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+  <header>
+    <a class="brand" href="index.html">Fight<span>OS</span></a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+  </header>
+  <nav class="docs" id="nav-tr"><a href="terms.html">Kullanım Koşulları</a> <a href="privacy.html">Gizlilik Politikası</a> <a href="aydinlatma.html">KVKK Aydınlatma Metni</a> <a href="prime.html">Prime Path Abonelik Koşulları</a> <a href="acik-riza.html">Açık Rıza Metni</a> <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a></nav>
+  <nav class="docs" id="nav-en" hidden><a href="terms.html#en">Terms of Use</a> <a href="privacy.html#en">Privacy Policy</a> <a href="aydinlatma.html#en">KVKK Privacy Notice</a> <a href="prime.html#en">Prime Path Subscription Terms</a> <a href="acik-riza.html#en">Explicit Consent</a> <a href="risk.html#en">Physical Risk Notice</a></nav>
+  <div class="lang-block visible" id="block-tr">
+    <h1>Yasal Belgeler</h1>
+    <p>FightOS uygulamasının yasal belgeleri. Uygulamayı sunan ve veri sorumlusu: Ozan Yıldırım (bireysel geliştirici).</p>
+    <ul>
+      <li><a href="terms.html">Kullanım Koşulları</a></li>
+      <li><a href="privacy.html">Gizlilik Politikası</a></li>
+      <li><a href="aydinlatma.html">KVKK Aydınlatma Metni</a></li>
+      <li><a href="prime.html">Prime Path Abonelik Koşulları</a></li>
+      <li><a href="acik-riza.html">Açık Rıza Metni</a></li>
+      <li><a href="risk.html">Fiziksel Risk Bilgilendirmesi</a></li>
+    </ul>
+    <p>İletişim ve destek: <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
+  </div>
+  <div class="lang-block" id="block-en">
+    <h1>Legal</h1>
+    <p>Legal documents for the FightOS app. Provider and data controller: Ozan Yıldırım (individual developer).</p>
+    <ul>
+      <li><a href="terms.html#en">Terms of Use</a></li>
+      <li><a href="privacy.html#en">Privacy Policy</a></li>
+      <li><a href="aydinlatma.html#en">KVKK Privacy Notice</a></li>
+      <li><a href="prime.html#en">Prime Path Subscription Terms</a></li>
+      <li><a href="acik-riza.html#en">Explicit Consent</a></li>
+      <li><a href="risk.html#en">Physical Risk Notice</a></li>
+    </ul>
+    <p>Contact and support: <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
+  </div>
 </div>
+<script>
+  function setLang(lang) {
+    for (const l of ['tr', 'en']) {
+      document.getElementById('block-' + l).classList.toggle('visible', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      document.getElementById('nav-' + l).hidden = l !== lang;
+    }
+    document.documentElement.lang = lang;
+    history.replaceState(null, '', lang === 'en' ? '#en' : location.pathname);
+  }
+  if (location.hash === '#en') setLang('en');
+</script>
 </body>
 </html>

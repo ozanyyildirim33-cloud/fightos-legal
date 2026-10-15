@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FightOS — Açık Rıza Metni / Explicit Consent</title>
+<style>  :root { --ink: #1a1a1f; --muted: #6b7280; --line: #e5e7eb; --accent: #ff2e4c; --bg: #fafafa; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-btn { border: 1px solid var(--line); background: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
+  .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+  nav.docs { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  nav.docs[hidden] { display: none; }
+  nav.docs a { color: var(--muted); text-decoration: none; }
+  nav.docs a[aria-current] { color: var(--ink); font-weight: 700; }
+  .updated { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 6px; }
+  h2 { font-size: 18px; margin: 32px 0 10px; }
+  p, li, td { color: #374151; font-size: 15px; }
+  ul { padding-left: 20px; }
+  a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-size: 13px; }
+  td { font-size: 14px; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, td { display: block; min-width: 0; }
+    thead { display: none; }
+    tr { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; }
+    td { border: none; padding: 3px 0; }
+    td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+  }
+  .callout { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+  .callout strong { color: #be123c; }
+  .callout p { margin: 6px 0 0; }
+  blockquote { margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: white; border-radius: 0 12px 12px 0; font-style: italic; color: #374151; }
+  .lang-block { display: none; }
+  .lang-block.visible { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="index.html">Fight<span>OS</span></a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+  </header>
+  <nav class="docs" id="nav-tr"><a href="terms.html">Kullanım Koşulları</a> <a href="privacy.html">Gizlilik Politikası</a> <a href="aydinlatma.html">KVKK Aydınlatma Metni</a> <a href="prime.html">Prime Path Abonelik Koşulları</a> <a href="acik-riza.html" aria-current="page">Açık Rıza Metni</a> <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a></nav>
+  <nav class="docs" id="nav-en" hidden><a href="terms.html#en">Terms of Use</a> <a href="privacy.html#en">Privacy Policy</a> <a href="aydinlatma.html#en">KVKK Privacy Notice</a> <a href="prime.html#en">Prime Path Subscription Terms</a> <a href="acik-riza.html#en" aria-current="page">Explicit Consent</a> <a href="risk.html#en">Physical Risk Notice</a></nav>
+  <div class="lang-block visible" id="block-tr">
+    <h1>Sağlık Verilerinin İşlenmesine İlişkin Açık Rıza Metni</h1>
+    <p class="updated">Son güncelleme: 15 Ekim 2026</p>
+    <p>FightOS'ta kilo, boy ve yaş bilgilerini girmek isteğe bağlıdır. Bu bilgiler, kalori ve nabız hesaplarıyla birlikte değerlendirildiğinde KVKK'nın 6. maddesi anlamında sağlık verisi sayılabildiği için yalnızca açık rızanla işlenir. Bu metin, rızanı vermeden önce neyi onayladığını açıklar. Ayrıntılı bilgi için <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>'ni okuyabilirsin.</p>
+    <h2>Hangi veriler</h2>
+    <p>Kilon, boyun ve yaşın (yaş, her yıl güncel kalması için doğum yılı olarak saklanır) ile bunlardan hesaplanan tahmini kalori ve hedef nabız aralığı.</p>
+    <h2>Hangi amaçla</h2>
+    <ul>
+      <li>Antrenmanlarının kalorisinin kilona göre tahmin edilmesi,</li>
+      <li>Antrenman sırasında yaşına göre hedef nabız aralığının gösterilmesi,</li>
+      <li>Boyunun ileride vücut ölçüsüne dayalı özellikler için profilinde saklanması.</li>
+    </ul>
+    <h2>Nerede saklanır</h2>
+    <p>Hesabınla birlikte Supabase'in Avrupa Birliği'ndeki (Almanya, Frankfurt) sunucularında saklanır. Bu, KVKK m.9 kapsamında yurt dışına aktarımdır. Bu bilgiler başka hiçbir kişi veya kuruluşla paylaşılmaz.</p>
+    <h2>Rıza vermezsen</h2>
+    <p>Uygulama'nın tüm özelliklerini kullanmaya devam edersin. Kalori 70 kg varsayımıyla tahmin edilir ve hedef nabız aralığı gösterilmez.</p>
+    <h2>Rızanı geri almak</h2>
+    <p>Rızanı dilediğin an, gerekçe göstermeden Profili Yönet → Vücut bilgileri ekranındaki &quot;Rızamı geri al ve bilgilerimi sil&quot; seçeneğiyle geri alabilirsin. Bu durumda kilo, boy ve yaş bilgilerin hemen silinir ve geçmiş antrenmanlarının kalorisi 70 kg varsayımıyla yeniden tahmin edilir. Rızanı geri alman, geri alma tarihine kadar yapılan işlemleri etkilemez.</p>
+    <h2>Rıza beyanı</h2>
+    <blockquote>Sağlık verisi niteliğindeki kilo, boy ve yaş bilgilerimin ve bunlardan hesaplanan tahmini kalori ve hedef nabız aralığının, kalori ve hedef nabız hesaplaması amacıyla işlenmesine ve bu amaçla Supabase'in Almanya'daki sunucularında saklanmasına açık rıza veriyorum.</blockquote>
+  </div>
+  <div class="lang-block" id="block-en">
+    <h1>Explicit Consent for Processing Health Data</h1>
+    <p class="updated">Last updated: October 15, 2026</p>
+    <p>Entering your weight, height and age in FightOS is optional. Combined with calorie and heart rate calculations, this information may count as health data under Article 6 of the KVKK, so it is processed only with your explicit consent. This text explains what you agree to before you consent. For details, see the <a href="aydinlatma.html#en">KVKK Privacy Notice</a>.</p>
+    <h2>What data</h2>
+    <p>Your weight, height and age (age is stored as your birth year so it stays current each year), and the estimated calories and target heart rate range calculated from them.</p>
+    <h2>For what purpose</h2>
+    <ul>
+      <li>Estimating your workouts' calories from your weight,</li>
+      <li>Showing your target heart rate range for your age during workouts,</li>
+      <li>Keeping your height on your profile for future body-measurement features.</li>
+    </ul>
+    <h2>Where it is stored</h2>
+    <p>With your account on Supabase servers in the European Union (Frankfurt, Germany). This is a transfer abroad under KVKK Art. 9. This information is not shared with any other person or organization.</p>
+    <h2>If you don't consent</h2>
+    <p>You can keep using every feature of the App. Calories are estimated assuming 70 kg and no target heart rate range is shown.</p>
+    <h2>Withdrawing consent</h2>
+    <p>You can withdraw consent at any time, without giving a reason, with &quot;Withdraw consent and delete my info&quot; on the Manage Profile → Body info screen. Your weight, height and age are then deleted immediately and your past workouts' calories are re-estimated assuming 70 kg. Withdrawal does not affect processing carried out before it.</p>
+    <h2>Consent statement</h2>
+    <blockquote>I give my explicit consent to the processing of my weight, height and age, which may be health data, and of the estimated calories and target heart rate range calculated from them, for calorie and target heart rate calculation, and to their storage for this purpose on Supabase servers in Germany.</blockquote>
+  </div>
+</div>
+<script>
+  function setLang(lang) {
+    for (const l of ['tr', 'en']) {
+      document.getElementById('block-' + l).classList.toggle('visible', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      document.getElementById('nav-' + l).hidden = l !== lang;
+    }
+    document.documentElement.lang = lang;
+    history.replaceState(null, '', lang === 'en' ? '#en' : location.pathname);
+  }
+  if (location.hash === '#en') setLang('en');
+</script>
+</body>
+</html>

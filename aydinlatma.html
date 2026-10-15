@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FightOS — KVKK Aydınlatma Metni / KVKK Privacy Notice</title>
+<style>  :root { --ink: #1a1a1f; --muted: #6b7280; --line: #e5e7eb; --accent: #ff2e4c; --bg: #fafafa; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-btn { border: 1px solid var(--line); background: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
+  .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
+  nav.docs { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  nav.docs[hidden] { display: none; }
+  nav.docs a { color: var(--muted); text-decoration: none; }
+  nav.docs a[aria-current] { color: var(--ink); font-weight: 700; }
+  .updated { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 6px; }
+  h2 { font-size: 18px; margin: 32px 0 10px; }
+  p, li, td { color: #374151; font-size: 15px; }
+  ul { padding-left: 20px; }
+  a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-size: 13px; }
+  td { font-size: 14px; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, td { display: block; min-width: 0; }
+    thead { display: none; }
+    tr { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; }
+    td { border: none; padding: 3px 0; }
+    td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+  }
+  .callout { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+  .callout strong { color: #be123c; }
+  .callout p { margin: 6px 0 0; }
+  blockquote { margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: white; border-radius: 0 12px 12px 0; font-style: italic; color: #374151; }
+  .lang-block { display: none; }
+  .lang-block.visible { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="index.html">Fight<span>OS</span></a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+    </div>
+  </header>
+  <nav class="docs" id="nav-tr"><a href="terms.html">Kullanım Koşulları</a> <a href="privacy.html">Gizlilik Politikası</a> <a href="aydinlatma.html" aria-current="page">KVKK Aydınlatma Metni</a> <a href="prime.html">Prime Path Abonelik Koşulları</a> <a href="acik-riza.html">Açık Rıza Metni</a> <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a></nav>
+  <nav class="docs" id="nav-en" hidden><a href="terms.html#en">Terms of Use</a> <a href="privacy.html#en">Privacy Policy</a> <a href="aydinlatma.html#en" aria-current="page">KVKK Privacy Notice</a> <a href="prime.html#en">Prime Path Subscription Terms</a> <a href="acik-riza.html#en">Explicit Consent</a> <a href="risk.html#en">Physical Risk Notice</a></nav>
+  <div class="lang-block visible" id="block-tr">
+    <h1>Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni</h1>
+    <p class="updated">Son güncelleme: 15 Ekim 2026</p>
+    <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (&quot;KVKK&quot;) 10. maddesi uyarınca, FightOS mobil uygulamasını (&quot;Uygulama&quot;) kullanan kişileri bilgilendirmek için hazırlanmıştır. Yalnızca bilgilendirme amaçlıdır; bir onay veya rıza metni değildir. Açık rızaya dayanan tek işlem olan vücut bilgilerinin işlenmesi için Uygulama içinde ayrıca onayın istenir.</p>
+    <h2>1. Veri Sorumlusu</h2>
+    <p>Veri sorumlusu: Ozan Yıldırım (bireysel geliştirici).<br>İletişim: <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
+    <h2>2. İşlenen Kişisel Veriler, İşleme Amaçları ve Hukuki Sebepler</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Veri kategorisi</th><th>İşlenen veriler</th><th>İşleme amacı</th><th>Hukuki sebep</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Veri kategorisi">Kimlik</td><td data-label="İşlenen veriler">Görünen ad, nick</td><td data-label="İşleme amacı">Hesabın oluşturulması, Uygulama içinde sana hitap edilmesi, nick'inin sıralama tablosunda gösterilmesi</td><td data-label="Hukuki sebep">KVKK m.5/2-c: sözleşmenin kurulması ve ifası</td></tr>
+        <tr><td data-label="Veri kategorisi">İletişim</td><td data-label="İşlenen veriler">E-posta adresi</td><td data-label="İşleme amacı">Hesaba giriş, hesabın doğrulanması ve kurtarılması, başvurularının yanıtlanması</td><td data-label="Hukuki sebep">KVKK m.5/2-c</td></tr>
+        <tr><td data-label="Veri kategorisi">Müşteri işlem</td><td data-label="İşlenen veriler">Antrenman kayıtları (disiplin, raund sayısı, süre, tempo ve dinlenme süreleri, koç komutu sayısı, antrenman sonunda verdiğin efor cevabı, tahmini kalori), sıralama tablosundaki toplam raund sayın, dil tercihi</td><td data-label="İşleme amacı">Antrenman geçmişinin ve ilerlemenin gösterilmesi, sıralama tablosunun oluşturulması</td><td data-label="Hukuki sebep">KVKK m.5/2-c</td></tr>
+        <tr><td data-label="Veri kategorisi">İşlem güvenliği</td><td data-label="İşlenen veriler">Hesap kimliği (ID), giriş ve oturum kayıtları (IP adresi dahil), nick değişiklik zamanları</td><td data-label="İşleme amacı">Hesap ve sistem güvenliği, kötüye kullanımın önlenmesi, nick değiştirme sınırının uygulanması</td><td data-label="Hukuki sebep">KVKK m.5/2-f: meşru menfaat</td></tr>
+        <tr><td data-label="Veri kategorisi">Nick bildirimleri</td><td data-label="İşlenen veriler">Bildiren ve bildirilen hesap, bildirilen nick, bildirim nedeni</td><td data-label="İşleme amacı">Uygunsuz nick'lerin incelenmesi ve topluluk kurallarının uygulanması</td><td data-label="Hukuki sebep">KVKK m.5/2-f</td></tr>
+        <tr><td data-label="Veri kategorisi">Abonelik</td><td data-label="İşlenen veriler">Abonelik durumu, ürün, satın alma işlem bilgileri (RevenueCat'in oluşturduğu anonim bir kimlikle)</td><td data-label="İşleme amacı">Aboneliğin doğrulanması ve Prime Path erişiminin sağlanması</td><td data-label="Hukuki sebep">KVKK m.5/2-c; uyuşmazlık hâlinde m.5/2-e: bir hakkın tesisi, kullanılması veya korunması</td></tr>
+        <tr><td data-label="Veri kategorisi">Hukuki işlem</td><td data-label="İşlenen veriler"><a href="terms.html">Kullanım Koşulları</a>'nı ve Fiziksel Risk Beyanı'nı onayladığın tarih ve sürüm; açık rıza ve cayma hakkı onaylarının tarihleri</td><td data-label="İşleme amacı">Onayların ispatı</td><td data-label="Hukuki sebep">KVKK m.5/2-e</td></tr>
+        <tr><td data-label="Veri kategorisi">Özel nitelikli: sağlık</td><td data-label="İşlenen veriler">Kilo, boy ve yaş (isteğe bağlı) ile bunlardan hesaplanan tahmini kalori ve hedef nabız aralığı</td><td data-label="İşleme amacı">Kalorinin kilona göre tahmin edilmesi, antrenmanda hedef nabız aralığının gösterilmesi</td><td data-label="Hukuki sebep">KVKK m.6: açık rıza</td></tr>
+      </tbody>
+    </table></div>
+    <p>Vücut bilgilerini vermek zorunda değilsin. Açık rıza vermezsen Uygulama'nın tüm özelliklerini kullanmaya devam edersin; bu durumda kalori 70 kg varsayımıyla tahmin edilir ve hedef nabız aralığı gösterilmez.</p>
+    <p>Uygulama'yı kullanmadan önce sorulan doğum yılı yalnızca cihazında, 18 yaş kontrolü için kullanılır; kaydedilmez ve bize gönderilmez.</p>
+    <h2>3. Kişisel Verilerin Toplanma Yöntemi</h2>
+    <p>Kişisel verilerin Uygulama arayüzü üzerinden, elektronik ortamda ve otomatik yollarla toplanır: senin tarafından doğrudan girilerek (ad, nick, e-posta, şifre, vücut bilgileri, efor cevabı), antrenman sırasında Uygulama tarafından kaydedilerek, &quot;Apple ile Giriş&quot; veya &quot;Google ile Giriş&quot;i kullanırsan bu sağlayıcılardan (ad ve e-posta), App Store veya Google Play'den RevenueCat aracılığıyla (abonelik durumu) ve sunucu kayıtlarından (IP adresi, oturum bilgileri).</p>
+    <h2>4. Kişisel Verilerin Aktarıldığı Taraflar ve Aktarım Amaçları</h2>
+    <ul>
+      <li>Supabase Inc.: barındırma, kimlik doğrulama ve veritabanı hizmeti. Verilerin Avrupa Birliği'nde (Almanya, Frankfurt) bulunan sunucularda saklanır. Amaç: Uygulama hizmetinin sunulması.</li>
+      <li>RevenueCat Inc. (ABD): abonelik ve satın alma yönetimi. Adın, e-postan ve hesap kimliğin iletilmez; satın alma bilgileri RevenueCat'in oluşturduğu anonim bir kimlikle işlenir. Amaç: aboneliğin doğrulanması.</li>
+      <li>Apple Inc. (ABD) ve Google LLC (ABD): &quot;Apple ile Giriş&quot; ve &quot;Google ile Giriş&quot; seçenekleri ile App Store ve Google Play ödemeleri. Ödeme bilgilerin yalnızca bu mağazalar tarafından işlenir, bize ulaşmaz.</li>
+      <li>Yetkili kamu kurum ve kuruluşları: kanunen yetkili oldukları hâllerde ve talep etmeleri üzerine, hukuki yükümlülüğün yerine getirilmesi amacıyla (KVKK m.5/2-ç).</li>
+    </ul>
+    <p>Sesli koç için yalnızca sabit antrenman komutlarının metni (ör. &quot;Jab, cross!&quot;) sunucumuz üzerinden ElevenLabs Inc.'e (ABD) gönderilerek seslendirilir. Bu metinler kişisel veri içermez; ElevenLabs'e hesabınla veya cihazınla ilgili hiçbir bilgi iletilmez.</p>
+    <p>Kişisel verilerin satılmaz, reklam veya pazarlama amacıyla kimseyle paylaşılmaz. Uygulama reklam göstermez ve seni diğer uygulama ve sitelerde izlemez.</p>
+    <h2>5. Yurt Dışına Kişisel Veri Aktarımı</h2>
+    <p>Verilerinin Supabase'in Almanya'daki sunucularında saklanması ve abonelik bilgilerinin RevenueCat (ABD) tarafından işlenmesi, KVKK m.9 kapsamında yurt dışına kişisel veri aktarımıdır. Bu sağlayıcılar, hizmet koşullarının parçası olan veri işleme sözleşmeleri çerçevesinde verilerini yalnızca bizim adımıza ve hizmetin sunulması amacıyla işler; bu sözleşmeler Avrupa Komisyonu'nun standart sözleşme maddelerini içerir. Verilerin şifreli bağlantı (TLS) üzerinden iletilir ve Supabase sunucularında şifrelenmiş olarak (AES-256) saklanır. RevenueCat'e hesabınla ilişkilendirilen bir kimlik gönderilmez; abonelik durumun anonim bir kimlikle tutulur. Sağlık verisi niteliğindeki vücut bilgilerinin işlenmesi ve bu amaçla yurt dışında saklanması için ayrıca açık rızan alınır.</p>
+    <p>&quot;Apple ile Giriş&quot;, &quot;Google ile Giriş&quot; ve mağaza ödemeleri sırasında yapılan işlemler, bu hizmetleri kullandığında ilgili sağlayıcının kendi gizlilik koşullarına da tabidir.</p>
+    <h2>6. Saklama Süreleri</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Veri</th><th>Saklama süresi</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Veri">Hesap bilgileri, antrenman kayıtları, sıralama bilgileri, onay kayıtları</td><td data-label="Saklama süresi">Hesabını silene kadar</td></tr>
+        <tr><td data-label="Veri">Vücut bilgileri (kilo, boy, yaş)</td><td data-label="Saklama süresi">Açık rızanı geri alana veya hesabını silene kadar</td></tr>
+        <tr><td data-label="Veri">Nick bildirimleri</td><td data-label="Saklama süresi">6 ay, sonra otomatik olarak silinir</td></tr>
+        <tr><td data-label="Veri">Nick değişiklik zamanları</td><td data-label="Saklama süresi">30 gün</td></tr>
+        <tr><td data-label="Veri">Giriş ve oturum kayıtları (IP adresi dahil)</td><td data-label="Saklama süresi">90 gün</td></tr>
+        <tr><td data-label="Veri">Abonelik ve satın alma kayıtları</td><td data-label="Saklama süresi">RevenueCat ve ilgili mağaza nezdinde, bu sağlayıcıların koşulları ve mevzuattaki saklama yükümlülükleri çerçevesinde</td></tr>
+      </tbody>
+    </table></div>
+    <p>Açık rızanı geri aldığında kilo, boy ve yaş bilgilerin silinir; geçmiş antrenmanlarının kalorisi kilona göre değil, 70 kg varsayımıyla yeniden tahmin edilir. Hesabını sildiğinde tüm verilerin kalıcı olarak silinir; silinen veriler teknik yedeklerden de yedekleme döngüsü içinde kendiliğinden silinir.</p>
+    <h2>7. KVKK m.11 Kapsamındaki Hakların</h2>
+    <p>Veri sorumlusuna başvurarak:</p>
+    <ul>
+      <li>Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+      <li>Kişisel verilerin işlenmişse buna ilişkin bilgi talep etme,</li>
+      <li>Kişisel verilerinin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+      <li>Yurt içinde veya yurt dışında kişisel verilerinin aktarıldığı üçüncü kişileri bilme,</li>
+      <li>Kişisel verilerinin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
+      <li>KVKK m.7'de öngörülen şartlar çerçevesinde kişisel verilerinin silinmesini veya yok edilmesini isteme,</li>
+      <li>Düzeltme, silme ve yok etme işlemlerinin, kişisel verilerinin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+      <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
+      <li>Kişisel verilerinin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraman hâlinde zararın giderilmesini talep etme</li>
+    </ul>
+    <p>haklarına sahipsin.</p>
+    <h2>8. Başvuru Yöntemi</h2>
+    <p>Bu haklara ilişkin taleplerini, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'e uygun olarak, Uygulama'da kayıtlı e-posta adresinden <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a> adresine yazarak iletebilirsin. Başvurunda adın ve soyadın, Uygulama'da kayıtlı e-posta adresin ve talebinin açıklaması bulunmalıdır; kimliğini doğrulamak için ek bilgi istenebilir.</p>
+    <p>Başvurun, talebin niteliğine göre en kısa sürede ve en geç 30 gün içinde ücretsiz olarak sonuçlandırılır; işlemin ayrıca bir maliyet gerektirmesi hâlinde Kurul'ca belirlenen tarifedeki ücret alınabilir. Başvurunun reddedilmesi, verilen cevabın yetersiz bulunması veya süresinde cevap verilmemesi hâllerinde, KVKK m.14 uyarınca cevabı öğrendiğin tarihten itibaren 30 gün ve her hâlde başvuru tarihinden itibaren 60 gün içinde Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsin.</p>
+    <p>Ayrıca hesabını Uygulama'da Profili Yönet → Hesabı Sil yoluyla silebilir, vücut bilgilerine ilişkin açık rızanı Profili Yönet → Vücut bilgileri ekranından dilediğin an geri alabilirsin.</p>
+  </div>
+  <div class="lang-block" id="block-en">
+    <h1>Privacy Notice on the Processing of Personal Data</h1>
+    <p class="updated">Last updated: October 15, 2026</p>
+    <p>This notice is provided under Article 10 of the Turkish Personal Data Protection Law No. 6698 (&quot;KVKK&quot;) to inform users of the FightOS mobile app (the &quot;App&quot;). It is for information only and is not a consent form. The only processing that relies on explicit consent, processing your body information, is asked for separately in the App.</p>
+    <h2>1. Data Controller</h2>
+    <p>Data controller: Ozan Yıldırım (individual developer).<br>Contact: <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
+    <h2>2. Personal Data Processed, Purposes and Legal Bases</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Category</th><th>Data</th><th>Purpose</th><th>Legal basis</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Category">Identity</td><td data-label="Data">Display name, nickname</td><td data-label="Purpose">Creating your account, addressing you in the App, showing your nickname on the leaderboard</td><td data-label="Legal basis">KVKK Art. 5(2)(c): formation and performance of a contract</td></tr>
+        <tr><td data-label="Category">Contact</td><td data-label="Data">Email address</td><td data-label="Purpose">Signing in, verifying and recovering your account, answering your requests</td><td data-label="Legal basis">KVKK Art. 5(2)(c)</td></tr>
+        <tr><td data-label="Category">Usage</td><td data-label="Data">Workout records (discipline, rounds, duration, pace and rest times, number of coach cues, the effort answer you give after a workout, estimated calories), your total rounds on the leaderboard, language preference</td><td data-label="Purpose">Showing your workout history and progress, building the leaderboard</td><td data-label="Legal basis">KVKK Art. 5(2)(c)</td></tr>
+        <tr><td data-label="Category">Security</td><td data-label="Data">Account ID, sign-in and session records (including IP address), nickname change times</td><td data-label="Purpose">Account and system security, preventing abuse, enforcing the nickname change limit</td><td data-label="Legal basis">KVKK Art. 5(2)(f): legitimate interest</td></tr>
+        <tr><td data-label="Category">Nickname reports</td><td data-label="Data">Reporting and reported account, reported nickname, reason</td><td data-label="Purpose">Reviewing inappropriate nicknames and enforcing community rules</td><td data-label="Legal basis">KVKK Art. 5(2)(f)</td></tr>
+        <tr><td data-label="Category">Subscription</td><td data-label="Data">Subscription status, product, purchase transaction details (under an anonymous ID created by RevenueCat)</td><td data-label="Purpose">Verifying your subscription and granting Prime Path access</td><td data-label="Legal basis">KVKK Art. 5(2)(c); in a dispute, Art. 5(2)(e): establishing, exercising or protecting a right</td></tr>
+        <tr><td data-label="Category">Legal transactions</td><td data-label="Data">The date and version of your acceptance of the <a href="terms.html#en">Terms of Use</a> and the Physical Risk Declaration; dates of your explicit consent and right-of-withdrawal acknowledgment</td><td data-label="Purpose">Proving your acceptances</td><td data-label="Legal basis">KVKK Art. 5(2)(e)</td></tr>
+        <tr><td data-label="Category">Special category: health</td><td data-label="Data">Weight, height and age (optional), and the estimated calories and target heart rate range calculated from them</td><td data-label="Purpose">Estimating calories from your weight, showing your target heart rate range during workouts</td><td data-label="Legal basis">KVKK Art. 6: explicit consent</td></tr>
+      </tbody>
+    </table></div>
+    <p>You don't have to provide body information. If you don't give explicit consent, you can keep using every feature of the App; calories are then estimated assuming 70 kg and no target heart rate range is shown.</p>
+    <p>The birth year asked before you use the App is only used on your device for the 18+ age check; it isn't saved or sent to us.</p>
+    <h2>3. How Personal Data Is Collected</h2>
+    <p>Personal data is collected electronically through the App's interface and by automated means: when you enter it yourself (name, nickname, email, password, body information, effort answer), when the App records your workouts, from Apple or Google if you use &quot;Sign in with Apple&quot; or &quot;Sign in with Google&quot; (name and email), from the App Store or Google Play via RevenueCat (subscription status), and from server logs (IP address, session details).</p>
+    <h2>4. Recipients and Purposes of Transfer</h2>
+    <ul>
+      <li>Supabase Inc.: hosting, authentication and database service. Your data is stored on servers in the European Union (Frankfurt, Germany). Purpose: providing the App.</li>
+      <li>RevenueCat Inc. (USA): subscription and purchase management. Your name, email and account ID are not sent; purchase data is processed under an anonymous ID created by RevenueCat. Purpose: verifying your subscription.</li>
+      <li>Apple Inc. (USA) and Google LLC (USA): &quot;Sign in with Apple&quot; and &quot;Sign in with Google&quot;, and App Store and Google Play payments. Your payment details are processed only by these stores and never reach us.</li>
+      <li>Authorized public authorities: where legally authorized and upon request, to comply with a legal obligation (KVKK Art. 5(2)(ç)).</li>
+    </ul>
+    <p>For the voice coach, only the text of fixed workout cues (e.g. &quot;Jab, cross!&quot;) is sent through our server to ElevenLabs Inc. (USA) to be voiced. These texts contain no personal data, and nothing about your account or device is sent to ElevenLabs.</p>
+    <p>Your personal data is never sold or shared for advertising or marketing. The App shows no ads and does not track you across other apps and websites.</p>
+    <h2>5. Transfers Abroad</h2>
+    <p>Storing your data on Supabase servers in Germany and processing of subscription data by RevenueCat (USA) are transfers of personal data abroad under KVKK Art. 9. These providers process your data only on our behalf and to provide the service, under data processing agreements that are part of their terms of service; these agreements incorporate the European Commission's standard contractual clauses. Your data is sent over an encrypted connection (TLS) and stored encrypted (AES-256) on Supabase servers. No identifier linked to your account is sent to RevenueCat; your subscription status is kept under an anonymous ID. Processing your body information, which may be health data, and storing it abroad for that purpose additionally require your explicit consent.</p>
+    <p>Processing that happens when you use &quot;Sign in with Apple&quot;, &quot;Sign in with Google&quot; or store payments is also subject to those providers' own privacy terms.</p>
+    <h2>6. Retention Periods</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+      <tbody>
+        <tr><td data-label="Data">Account information, workout records, leaderboard data, acceptance records</td><td data-label="Retention">Until you delete your account</td></tr>
+        <tr><td data-label="Data">Body information (weight, height, age)</td><td data-label="Retention">Until you withdraw consent or delete your account</td></tr>
+        <tr><td data-label="Data">Nickname reports</td><td data-label="Retention">6 months, then deleted automatically</td></tr>
+        <tr><td data-label="Data">Nickname change times</td><td data-label="Retention">30 days</td></tr>
+        <tr><td data-label="Data">Sign-in and session records (including IP address)</td><td data-label="Retention">90 days</td></tr>
+        <tr><td data-label="Data">Subscription and purchase records</td><td data-label="Retention">With RevenueCat and the relevant store, under those providers' terms and statutory retention obligations</td></tr>
+      </tbody>
+    </table></div>
+    <p>When you withdraw consent, your weight, height and age are deleted, and the calories of your past workouts are re-estimated assuming 70 kg instead of your weight. When you delete your account, all of your data is permanently deleted; deleted data also expires from technical backups within the backup cycle.</p>
+    <h2>7. Your Rights under KVKK Art. 11</h2>
+    <p>By applying to the data controller, you have the right to:</p>
+    <ul>
+      <li>learn whether your personal data is processed,</li>
+      <li>request information about it if it has been processed,</li>
+      <li>learn the purpose of processing and whether it is used accordingly,</li>
+      <li>know the third parties in Turkey or abroad to whom it is transferred,</li>
+      <li>request correction if it is incomplete or inaccurate,</li>
+      <li>request its deletion or destruction under the conditions of KVKK Art. 7,</li>
+      <li>request that corrections, deletions and destructions be notified to third parties to whom it was transferred,</li>
+      <li>object to a result against you arising from analysis exclusively by automated systems,</li>
+      <li>claim compensation if you suffer damage due to unlawful processing.</li>
+    </ul>
+    <h2>8. How to Apply</h2>
+    <p>You can send requests about these rights, in line with the Communiqué on the Procedures and Principles of Application to the Data Controller, by writing to <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a> from the email address registered in the App. Include your full name, your registered email address and a description of your request; additional information may be requested to verify your identity.</p>
+    <p>Your request will be answered as soon as possible and within 30 days at the latest, free of charge; if the action involves an additional cost, the fee set by the Board's tariff may be charged. If your request is rejected, the answer is insufficient, or no answer is given in time, you may file a complaint with the Personal Data Protection Board under KVKK Art. 14 within 30 days of learning the answer and in any case within 60 days of your application.</p>
+    <p>You can also delete your account in the App via Manage Profile → Delete Account, and withdraw your consent for body information at any time on the Manage Profile → Body info screen.</p>
+  </div>
+</div>
+<script>
+  function setLang(lang) {
+    for (const l of ['tr', 'en']) {
+      document.getElementById('block-' + l).classList.toggle('visible', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      document.getElementById('nav-' + l).hidden = l !== lang;
+    }
+    document.documentElement.lang = lang;
+    history.replaceState(null, '', lang === 'en' ? '#en' : location.pathname);
+  }
+  if (location.hash === '#en') setLang('en');
+</script>
+</body>
+</html>

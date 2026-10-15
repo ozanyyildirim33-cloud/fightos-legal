@@ -3,63 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FightOS — Kullanım Şartları / Terms of Service</title>
-<style>
-  :root {
-    --ink: #1a1a1f;
-    --muted: #6b7280;
-    --line: #e5e7eb;
-    --accent: #ff2e4c;
-    --bg: #fafafa;
-  }
+<title>FightOS — Kullanım Koşulları / Terms of Use</title>
+<style>  :root { --ink: #1a1a1f; --muted: #6b7280; --line: #e5e7eb; --accent: #ff2e4c; --bg: #fafafa; }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.65;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
-  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
   .brand span { color: var(--accent); }
   .lang-toggle { display: flex; gap: 6px; }
-  .lang-btn {
-    border: 1px solid var(--line);
-    background: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--muted);
-  }
+  .lang-btn { border: 1px solid var(--line); background: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
   .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
-  .updated { color: var(--muted); font-size: 13px; margin-bottom: 32px; }
-  h1 { font-size: 28px; margin: 24px 0 4px; }
+  nav.docs { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  nav.docs[hidden] { display: none; }
+  nav.docs a { color: var(--muted); text-decoration: none; }
+  nav.docs a[aria-current] { color: var(--ink); font-weight: 700; }
+  .updated { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 6px; }
   h2 { font-size: 18px; margin: 32px 0 10px; }
-  p, li { color: #374151; font-size: 15px; }
+  p, li, td { color: #374151; font-size: 15px; }
   ul { padding-left: 20px; }
-  .notice {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-size: 13px;
-    color: #9a3412;
-    margin-bottom: 28px;
-  }
-  .health-warning {
-    background: #fef2f2;
-    border: 2px solid #fca5a5;
-    border-radius: 12px;
-    padding: 18px 20px;
-    margin: 16px 0 28px;
-  }
-  .health-warning strong { color: #b91c1c; display: block; margin-bottom: 6px; font-size: 15px; }
-  .health-warning p { color: #7f1d1d; font-size: 14px; margin: 0; }
   a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-size: 13px; }
+  td { font-size: 14px; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, td { display: block; min-width: 0; }
+    thead { display: none; }
+    tr { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; }
+    td { border: none; padding: 3px 0; }
+    td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+  }
+  .callout { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+  .callout strong { color: #be123c; }
+  .callout p { margin: 6px 0 0; }
+  blockquote { margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: white; border-radius: 0 12px 12px 0; font-style: italic; color: #374151; }
   .lang-block { display: none; }
   .lang-block.visible { display: block; }
 </style>
@@ -67,115 +47,120 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="brand">Fight<span>OS</span></div>
+    <a class="brand" href="index.html">Fight<span>OS</span></a>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
       <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
     </div>
   </header>
-
-  <!-- ================= TÜRKÇE ================= -->
+  <nav class="docs" id="nav-tr"><a href="terms.html" aria-current="page">Kullanım Koşulları</a> <a href="privacy.html">Gizlilik Politikası</a> <a href="aydinlatma.html">KVKK Aydınlatma Metni</a> <a href="prime.html">Prime Path Abonelik Koşulları</a> <a href="acik-riza.html">Açık Rıza Metni</a> <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a></nav>
+  <nav class="docs" id="nav-en" hidden><a href="terms.html#en" aria-current="page">Terms of Use</a> <a href="privacy.html#en">Privacy Policy</a> <a href="aydinlatma.html#en">KVKK Privacy Notice</a> <a href="prime.html#en">Prime Path Subscription Terms</a> <a href="acik-riza.html#en">Explicit Consent</a> <a href="risk.html#en">Physical Risk Notice</a></nav>
   <div class="lang-block visible" id="block-tr">
-    <div class="notice">
-      Bu belge FightOS ekibi tarafından hazırlanmıştır ve resmi bir hukuki danışmanlık yerine geçmez. Uygulamayı mağazalara sunmadan önce bir avukata gözden geçirtmen önerilir.
-    </div>
-    <h1>Kullanım Şartları</h1>
-    <p class="updated">Son güncelleme: 26 Eylül 2026</p>
-
-    <p>FightOS'u kullanarak aşağıdaki şartları kabul etmiş olursun. Lütfen dikkatlice oku.</p>
-
-    <div class="health-warning">
-      <strong>⚠️ Sağlık ve Güvenlik Uyarısı</strong>
-      <p>FightOS, boks, kickboks ve Muay Thai gibi temas sporlarına yönelik antrenman rehberliği sunar. Bu tür fiziksel aktiviteler yaralanma riski taşır. Uygulamayı kullanmadan önce, özellikle mevcut bir sağlık sorunun varsa, bir doktora danışmanı öneririz. Antrenmanlarını kendi fiziksel sınırların ve becerinle, güvenli bir ortamda yapman senin sorumluluğundadır. FightOS bir kişisel antrenör ya da tıbbi tavsiye kaynağı değildir.</p>
-    </div>
-
+    <h1>Kullanım Koşulları</h1>
+    <p class="updated">Son güncelleme: 15 Ekim 2026</p>
+    <p>Bu koşullar, FightOS uygulamasının (&quot;Uygulama&quot;) kullanımını düzenler. Uygulama'yı sunan: Ozan Yıldırım (bireysel geliştirici), <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a>. Hesabını oluşturduktan sonra bu koşulları ayrı bir adımda onaylarsın; onaylamadan Uygulama'yı kullanamazsın.</p>
+    <div class="callout"><strong>Sağlık ve Güvenlik Uyarısı</strong><p>FightOS yüksek eforlu fiziksel aktivite içerir ve sakatlanma riski taşır. Uygulama bir doktorun, fizyoterapistin veya profesyonel antrenörün yerine geçmez ve tıbbi tavsiye vermez. Gösterilen kalori ve hedef nabız değerleri genel formüllerle hesaplanmış tahminlerdir; hata içerebilir. Başlamadan önce, özellikle bir sağlık sorunun varsa, hekimine danış. Güvenli bir ortamda ve uygun ekipmanla çalış. Göğüs ağrısı, nefes darlığı, baş dönmesi, bulantı, çarpıntı veya keskin bir ağrı hissedersen antrenmanı hemen bırak; belirtiler geçmezse 112'yi ara. Ayrıntılar 4. bölümde ve <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a>'nde yer alır.</p></div>
     <h2>1. Hizmet Tanımı</h2>
-    <p>FightOS, AI destekli sesli koçluk, antrenman zamanlayıcıları ve ilerleme takibi sunan bir dövüş sporları antrenman uygulamasıdır.</p>
-
-    <h2>2. Hesap Oluşturma</h2>
-    <p>Uygulamayı kullanmak için bir hesap oluşturman gerekir (e-posta ile ya da Apple veya Google ile giriş yaparak). Hesap bilgilerinin güvenliğinden ve hesabın altında yapılan işlemlerden sen sorumlusun.</p>
-
-    <h2>3. Abonelik ve Ödemeler</h2>
-    <p>FightOS Prime Path aboneliği, App Store veya Google Play üzerinden satın alınır ve yönetilir. Abonelikler, iptal etmediğin sürece otomatik olarak yenilenir. Fiyatlar ve deneme süreleri uygulama içinde ve mağaza sayfasında belirtilir. İptal, ilgili mağazanın abonelik ayarlarından yapılır.</p>
-
-    <h2>4. Fikri Mülkiyet</h2>
-    <p>Uygulama içeriği, tasarımı ve markası FightOS'a aittir. İçeriği izinsiz kopyalayamaz veya dağıtamazsın.</p>
-
-    <h2>5. Kullanım Kısıtlamaları</h2>
-    <p>Uygulamayı yasa dışı amaçlarla, başka kullanıcılara zarar verecek şekilde veya sistemlerine izinsiz erişmeye çalışarak kullanamazsın.</p>
-    <p>Sıralama tablosunda diğer kullanıcılara görünen nick'in hakaret, nefret söylemi veya cinsel içerik taşıyamaz; başka birini, FightOS'u ya da ekibini taklit edemez. Bu tür nick'leri filtreleyebilir, değiştirebilir ya da kaldırabiliriz. Uygunsuz bir nick görürsen sıralama tablosunda o kullanıcının yanındaki bayrak simgesiyle bildirebilirsin: bildirdiğin kullanıcıyı senin için hemen gizleriz ve bildirimi kısa sürede inceleriz. Tekrarlanan ihlallerde hesap askıya alınabilir (bkz. Madde 7).</p>
-
-    <h2>6. Sorumluluğun Sınırlandırılması</h2>
-    <p>FightOS, uygulamanın kullanımından doğabilecek fiziksel yaralanma, mal kaybı veya dolaylı zararlardan yasaların izin verdiği azami ölçüde sorumlu değildir.</p>
-
-    <h2>7. Hesap Feshi</h2>
-    <p>Şartları ihlal etmen durumunda hesabını askıya alabilir veya sonlandırabiliriz. Hesabını istediğin zaman uygulama içinden (Profili Yönet ekranındaki Hesabı Sil seçeneği) kendin silebilirsin.</p>
-
-    <h2>8. Değişiklikler</h2>
-    <p>Bu şartları zaman zaman güncelleyebiliriz. Önemli değişikliklerde seni bilgilendireceğiz.</p>
-
-    <h2>9. Uygulanacak Hukuk</h2>
-    <p>Bu şartlar Türkiye Cumhuriyeti kanunlarına tabidir.</p>
-
-    <h2>10. İletişim</h2>
-    <p><a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+    <p>FightOS; boks, kickboks ve Muay Thai tekniklerine ve HIIT'e dayalı antrenmanlar için yapay zekâ destekli sesli koç, raund zamanlayıcısı, antrenman geçmişi, ilerleme analizi ve sıralama tablosu sunan bir antrenman uygulamasıdır. Antrenmanlar tek başına (ör. gölge boksu veya kum torbası ile) yapılacak şekilde tasarlanmıştır; Uygulama bir rakip veya partnerle temaslı dövüş (sparring) yaptırmaz.</p>
+    <h2>2. Yaş Sınırı</h2>
+    <p>Uygulama'yı kullanmak için 18 yaşında veya daha büyük olmalısın. Uygulama'yı kullanmadan önce yaşın kontrol edilir. 18 yaşından küçük birine ait olduğu anlaşılan hesaplar kapatılır ve verileri silinir.</p>
+    <h2>3. Hesap</h2>
+    <p>Uygulama'yı kullanmak için e-posta ile ya da &quot;Apple ile Giriş&quot; veya &quot;Google ile Giriş&quot; ile bir hesap oluşturman gerekir. Hesap bilgilerinin güvenliğinden ve hesabın altında yapılan işlemlerden sen sorumlusun. Hesabın ve verilerin <a href="privacy.html">Gizlilik Politikası</a> ve <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>'nde açıklandığı şekilde işlenir.</p>
+    <h2>4. Fiziksel Risk ve Sağlık</h2>
+    <ul>
+      <li>Antrenmanlar yüksek eforlu vuruş, tekme, diz ve kardiyo hareketleri içerir. Bu hareketler burkulma, gerilme, kas ve eklem yaralanmaları, bilek ve el yaralanmaları, aşırı yorgunluk, baş dönmesi, bayılma ve kalp-damar sorunları gibi riskler taşır. Kum torbası gibi bir hedefe vurduğunda veya bir partnerle çalıştığında darbeye bağlı yaralanma (ör. sarsıntı) riski artar.</li>
+      <li>Kalp, tansiyon, astım, diyabet, eklem veya omurga sorunun varsa, hamileysen ya da yakın zamanda yaralanma veya ameliyat geçirdiysen başlamadan önce hekimine danış.</li>
+      <li>Yeterli alanı olan, kaygan olmayan bir zeminde, uygun ekipmanla (ör. el bandajı, eldiven) ve ısınarak çalış; su içmeyi ihmal etme.</li>
+      <li>Uygulama'daki talimatlar geneldir ve kişisel sağlık durumuna göre uyarlanmamıştır. Antrenmanı kendi fiziksel durumuna ve sınırlarına göre ayarlamak senin sorumluluğundadır.</li>
+      <li>Belirtilerde (göğüs ağrısı, nefes darlığı, baş dönmesi, bulantı, çarpıntı, keskin ağrı) antrenmanı hemen bırak.</li>
+    </ul>
+    <p>Hesabını oluşturduktan sonra, bu koşullardan ayrı bir adımda <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a>'ni okuyup beyanını onaylarsın.</p>
+    <h2>5. Tahmini Değerler</h2>
+    <p>Kalori, kilona (girmediysen 70 kg varsayımına), antrenman süresine ve disipline göre genel bir formülle tahmin edilir. Hedef nabız aralığı yaşına göre genel bir formülle hesaplanır; Uygulama nabzını ölçmez. Bu değerler tahminidir, kişiden kişiye değişir ve hata içerebilir; tıbbi bir karar için kullanılmamalıdır.</p>
+    <h2>6. Prime Path Aboneliği</h2>
+    <p>Prime Path; kickboks, Muay Thai ve HIIT modlarını, sınırsız raund ve özel süre ayarını, sınırsız özel antrenmanı, Dövüşçü Puanı'nı ve detaylı ilerleme analizini açar. Aylık ve yıllık seçenekleri vardır; güncel fiyatlar, vergiler dahil olarak satın alma ekranında ve mağazada gösterilir. Şu anda ücretsiz deneme sunulmamaktadır.</p>
+    <p>Satın alma ve ödeme App Store veya Google Play üzerinden yapılır; ödeme bilgilerin bize hiçbir zaman ulaşmaz. Abonelik, mevcut dönemin bitiminden önce iptal edilmediği sürece aynı süre için otomatik olarak yenilenir. İptal, ilgili mağazanın abonelik ayarlarından yapılır; iptal ettiğinde Prime Path erişimin ödemesini yaptığın dönemin sonuna kadar devam eder. Hesabını silmek aboneliğini iptal etmez.</p>
+    <p>Prime Path satın alma onaylandığı anda kullanımına açılan, elektronik ortamda anında ifa edilen bir hizmettir. Mesafeli Sözleşmeler Yönetmeliği'nin 15. maddesi uyarınca bu tür hizmetlerde cayma hakkı bulunmaz; satın almadan önce bunu ayrıca onaylarsın. İadeler mağazanın kendi iade süreci üzerinden yürütülür. Tüketici mevzuatından doğan yasal hakların saklıdır. Tüm ayrıntılar: <a href="prime.html">Prime Path Abonelik Koşulları</a>.</p>
+    <h2>7. Fikri Mülkiyet</h2>
+    <p>Uygulama'nın içeriği, tasarımı, sesleri ve markası Ozan Yıldırım'a aittir. İçeriği izinsiz kopyalayamaz, çoğaltamaz veya dağıtamazsın.</p>
+    <h2>8. Kullanım Kuralları</h2>
+    <p>Uygulama'yı yasa dışı amaçlarla, başka kullanıcılara zarar verecek şekilde veya sistemlerine izinsiz erişmeye çalışarak kullanamazsın.</p>
+    <p>Sıralama tablosunda diğer kullanıcılara görünen nick'in hakaret, nefret söylemi veya cinsel içerik taşıyamaz; başka birini, FightOS'u ya da geliştiricisini taklit edemez. Bu tür nick'leri filtreleyebilir, değiştirebilir veya kaldırabiliriz. Uygunsuz bir nick görürsen sıralama tablosunda o kullanıcının yanındaki bayrak simgesiyle bildirebilirsin: bildirdiğin kullanıcıyı senin için hemen gizleriz ve bildirimi kısa sürede inceleriz. Tekrarlanan ihlallerde hesap askıya alınabilir.</p>
+    <h2>9. Sorumluluk</h2>
+    <ul>
+      <li>Uygulama'yı özenle geliştiriyoruz; ancak her zaman kesintisiz ve hatasız çalışacağını garanti edemeyiz.</li>
+      <li>Uygulama'nın talimatları genel niteliktedir. Antrenmanları kendi sağlık durumuna, fiziksel sınırlarına ve bu koşullardaki uyarılara uygun şekilde yapmak senin sorumluluğundadır.</li>
+      <li>Hafif kusurdan kaynaklanan dolaylı zararlardan (ör. veri kaybı veya kâr kaybı) sorumluluk, mevzuatın izin verdiği ölçüde sınırlıdır.</li>
+      <li>Kast veya ağır kusurdan doğan sorumluluk, bedensel zararlardan doğan sorumluluk ve emredici mevzuat (özellikle 6502 sayılı Tüketicinin Korunması Hakkında Kanun) uyarınca sınırlandırılması veya kaldırılması mümkün olmayan sorumluluklar bu koşullarla sınırlandırılmaz veya kaldırılmaz.</li>
+    </ul>
+    <h2>10. Hesap Feshi ve Silme</h2>
+    <p>Bu koşulları ihlal etmen durumunda hesabını askıya alabilir veya kapatabiliriz. Hesabını istediğin zaman Uygulama içinden (Profili Yönet → Hesabı Sil) kendin silebilirsin; bu işlem geri alınamaz ve App Store veya Google Play'deki aboneliğini iptal etmez.</p>
+    <h2>11. Değişiklikler</h2>
+    <p>Bu koşullar zaman zaman güncellenebilir. Esaslı değişikliklerde Uygulama içinden bilgilendirilirsin ve güncel koşulları yeniden onaylaman istenir.</p>
+    <h2>12. Uygulanacak Hukuk ve Uyuşmazlıklar</h2>
+    <p>Bu koşullar Türkiye Cumhuriyeti kanunlarına tabidir. Tüketiciler, 6502 sayılı Kanun uyarınca parasal sınırlar dahilinde yerleşim yerlerindeki Tüketici Hakem Heyetleri'ne, bu sınırları aşan uyuşmazlıklarda Tüketici Mahkemeleri'ne başvurabilir.</p>
+    <h2>13. İletişim</h2>
+    <p><a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
   </div>
-
-  <!-- ================= ENGLISH ================= -->
   <div class="lang-block" id="block-en">
-    <div class="notice">
-      This document was drafted by the FightOS team and does not constitute formal legal advice. We recommend having it reviewed by a lawyer before submitting the app to the stores.
-    </div>
-    <h1>Terms of Service</h1>
-    <p class="updated">Last updated: September 26, 2026</p>
-
-    <p>By using FightOS, you agree to the terms below. Please read them carefully.</p>
-
-    <div class="health-warning">
-      <strong>⚠️ Health & Safety Warning</strong>
-      <p>FightOS provides training guidance for contact sports such as boxing, kickboxing, and Muay Thai. These physical activities carry a risk of injury. We recommend consulting a doctor before using the app, especially if you have an existing health condition. It is your responsibility to train within your own physical limits and ability, in a safe environment. FightOS is not a personal trainer or a source of medical advice.</p>
-    </div>
-
+    <h1>Terms of Use</h1>
+    <p class="updated">Last updated: October 15, 2026</p>
+    <p>These terms govern your use of the FightOS app (the &quot;App&quot;). The App is provided by Ozan Yıldırım (individual developer), <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a>. After creating your account you accept these terms in a separate step; you can't use the App without accepting them.</p>
+    <div class="callout"><strong>Health &amp; Safety Warning</strong><p>FightOS involves high-intensity physical activity and carries a risk of injury. The App does not replace a doctor, physiotherapist or professional trainer and does not give medical advice. The calorie and target heart rate figures shown are estimates from general formulas and may be inaccurate. Talk to your doctor before you start, especially if you have a health condition. Train in a safe place with suitable equipment. If you feel chest pain, shortness of breath, dizziness, nausea, palpitations or sharp pain, stop immediately; if symptoms don't pass, call emergency services (112 in Turkey). See Section 4 and the <a href="risk.html#en">Physical Risk Notice</a> for details.</p></div>
     <h2>1. Description of Service</h2>
-    <p>FightOS is a combat sports training app offering AI-powered voice coaching, workout timers, and progress tracking.</p>
-
-    <h2>2. Account Creation</h2>
-    <p>You need an account to use the app (by email, or by signing in with Apple or Google). You are responsible for the security of your account credentials and for any activity under your account.</p>
-
-    <h2>3. Subscriptions & Payments</h2>
-    <p>The FightOS Prime Path subscription is purchased and managed through the App Store or Google Play. Subscriptions renew automatically unless cancelled. Prices and trial periods are shown in the app and on the store listing. Cancellation is handled through your store's subscription settings.</p>
-
-    <h2>4. Intellectual Property</h2>
-    <p>The app's content, design, and branding belong to FightOS. You may not copy or distribute the content without permission.</p>
-
-    <h2>5. Acceptable Use</h2>
-    <p>You may not use the app for unlawful purposes, to harm other users, or to attempt unauthorized access to our systems.</p>
-    <p>The nickname other users see on the leaderboard must not contain insults, hate speech or sexual content, and must not impersonate another person, FightOS or its team. We may filter, change or remove such nicknames. If you see an inappropriate nickname, you can report it with the flag icon next to that user on the leaderboard: we hide the reported user for you right away and review the report promptly. Repeated violations may lead to account suspension (see Section 7).</p>
-
-    <h2>6. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by law, FightOS is not liable for any physical injury, property loss, or indirect damages arising from your use of the app.</p>
-
-    <h2>7. Account Termination</h2>
-    <p>We may suspend or terminate your account if you violate these terms. You can delete your account yourself at any time from within the app (the Delete Account option in Manage Profile).</p>
-
-    <h2>8. Changes</h2>
-    <p>We may update these terms from time to time. We will notify you of any significant changes.</p>
-
-    <h2>9. Governing Law</h2>
-    <p>These terms are governed by the laws of the Republic of Turkey.</p>
-
-    <h2>10. Contact</h2>
-    <p><a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+    <p>FightOS is a training app offering an AI-powered voice coach, round timer, workout history, progress analytics and a leaderboard for workouts based on boxing, kickboxing and Muay Thai techniques and HIIT. Workouts are designed to be done alone (e.g. shadowboxing or on a heavy bag); the App does not involve contact fighting (sparring) with an opponent or partner.</p>
+    <h2>2. Age Requirement</h2>
+    <p>You must be 18 or older to use the App. Your age is checked before you use the App. Accounts found to belong to someone under 18 are closed and their data deleted.</p>
+    <h2>3. Account</h2>
+    <p>You need an account to use the App, created by email or with &quot;Sign in with Apple&quot; or &quot;Sign in with Google&quot;. You are responsible for the security of your account credentials and for activity under your account. Your account and data are processed as described in the <a href="privacy.html#en">Privacy Policy</a> and the <a href="aydinlatma.html#en">KVKK Privacy Notice</a>.</p>
+    <h2>4. Physical Risk and Health</h2>
+    <ul>
+      <li>Workouts include high-intensity punches, kicks, knees and cardio. These carry risks such as sprains, strains, muscle and joint injuries, hand and wrist injuries, exhaustion, dizziness, fainting and cardiovascular problems. Striking a target such as a heavy bag or training with a partner increases the risk of impact injuries (e.g. concussion).</li>
+      <li>Talk to your doctor before you start if you have a heart, blood pressure, asthma, diabetes, joint or spine condition, are pregnant, or have had a recent injury or surgery.</li>
+      <li>Train on a non-slip surface with enough space, with suitable equipment (e.g. hand wraps, gloves), warm up first and stay hydrated.</li>
+      <li>The App's instructions are general and not tailored to your personal health. Adjusting the workout to your own condition and limits is your responsibility.</li>
+      <li>Stop immediately if you have symptoms (chest pain, shortness of breath, dizziness, nausea, palpitations, sharp pain).</li>
+    </ul>
+    <p>After creating your account, in a step separate from these terms, you read the <a href="risk.html#en">Physical Risk Notice</a> and confirm its declaration.</p>
+    <h2>5. Estimates</h2>
+    <p>Calories are estimated with a general formula from your weight (or 70 kg if you haven't entered it), workout duration and discipline. The target heart rate range is calculated from your age with a general formula; the App does not measure your heart rate. These figures are estimates, vary from person to person and may be inaccurate; they must not be used for medical decisions.</p>
+    <h2>6. Prime Path Subscription</h2>
+    <p>Prime Path unlocks the kickboxing, Muay Thai and HIIT modes, unlimited rounds and custom timing, unlimited custom workouts, the Fighter Score and detailed progress analytics. Monthly and yearly options are available; current prices, including taxes, are shown on the purchase screen and in the store. No free trial is currently offered.</p>
+    <p>Purchases and payments are made through the App Store or Google Play; your payment details never reach us. The subscription renews automatically for the same period unless cancelled before the current period ends. Cancellation is done in the relevant store's subscription settings; when you cancel, Prime Path access continues until the end of the period you have paid for. Deleting your account does not cancel your subscription.</p>
+    <p>Prime Path is a service performed instantly online and becomes available as soon as the purchase is confirmed. Under Article 15 of the Turkish Distance Contracts Regulation, there is no right of withdrawal for such services; you confirm this separately before buying. Refunds are handled through the store's own refund process. Your statutory consumer rights are not affected. Full details: <a href="prime.html#en">Prime Path Subscription Terms</a>.</p>
+    <h2>7. Intellectual Property</h2>
+    <p>The App's content, design, sounds and brand belong to Ozan Yıldırım. You may not copy, reproduce or distribute the content without permission.</p>
+    <h2>8. Acceptable Use</h2>
+    <p>You may not use the App for unlawful purposes, to harm other users, or to attempt unauthorized access to its systems.</p>
+    <p>The nickname other users see on the leaderboard must not contain insults, hate speech or sexual content, and must not impersonate another person, FightOS or its developer. We may filter, change or remove such nicknames. If you see an inappropriate nickname, you can report it with the flag icon next to that user on the leaderboard: we hide the reported user for you right away and review the report promptly. Repeated violations may lead to account suspension.</p>
+    <h2>9. Liability</h2>
+    <ul>
+      <li>We develop the App with care, but we can't guarantee that it will always work without interruption or errors.</li>
+      <li>The App's instructions are general. Training in line with your health, your physical limits and the warnings in these terms is your responsibility.</li>
+      <li>Liability for indirect damage caused by slight negligence (e.g. loss of data or profit) is limited to the extent permitted by law.</li>
+      <li>Liability for intent or gross negligence, liability for bodily harm, and any liability that cannot be limited or excluded under mandatory law (in particular Turkish Consumer Protection Law No. 6502) is not limited or excluded by these terms.</li>
+    </ul>
+    <h2>10. Termination and Account Deletion</h2>
+    <p>We may suspend or close your account if you violate these terms. You can delete your account yourself at any time from within the App (Manage Profile → Delete Account); this cannot be undone and does not cancel your App Store or Google Play subscription.</p>
+    <h2>11. Changes</h2>
+    <p>These terms may be updated from time to time. For material changes, you will be notified in the App and asked to accept the updated terms again.</p>
+    <h2>12. Governing Law and Disputes</h2>
+    <p>These terms are governed by the laws of the Republic of Turkey. Consumers may apply to the Consumer Arbitration Committees at their place of residence within the monetary limits set under Law No. 6502, and to the Consumer Courts for disputes above those limits.</p>
+    <h2>13. Contact</h2>
+    <p><a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
   </div>
 </div>
-
 <script>
   function setLang(lang) {
-    document.getElementById('block-tr').classList.toggle('visible', lang === 'tr');
-    document.getElementById('block-en').classList.toggle('visible', lang === 'en');
-    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    for (const l of ['tr', 'en']) {
+      document.getElementById('block-' + l).classList.toggle('visible', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      document.getElementById('nav-' + l).hidden = l !== lang;
+    }
+    document.documentElement.lang = lang;
+    history.replaceState(null, '', lang === 'en' ? '#en' : location.pathname);
   }
+  if (location.hash === '#en') setLang('en');
 </script>
 </body>
 </html>

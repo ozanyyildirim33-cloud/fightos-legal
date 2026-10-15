@@ -4,54 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FightOS — Gizlilik Politikası / Privacy Policy</title>
-<style>
-  :root {
-    --ink: #1a1a1f;
-    --muted: #6b7280;
-    --line: #e5e7eb;
-    --accent: #ff2e4c;
-    --bg: #fafafa;
-  }
+<style>  :root { --ink: #1a1a1f; --muted: #6b7280; --line: #e5e7eb; --accent: #ff2e4c; --bg: #fafafa; }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.65;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
-  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
   .brand span { color: var(--accent); }
   .lang-toggle { display: flex; gap: 6px; }
-  .lang-btn {
-    border: 1px solid var(--line);
-    background: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--muted);
-  }
+  .lang-btn { border: 1px solid var(--line); background: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
   .lang-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
-  .updated { color: var(--muted); font-size: 13px; margin-bottom: 32px; }
-  h1 { font-size: 28px; margin: 24px 0 4px; }
+  nav.docs { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 12px 0 18px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  nav.docs[hidden] { display: none; }
+  nav.docs a { color: var(--muted); text-decoration: none; }
+  nav.docs a[aria-current] { color: var(--ink); font-weight: 700; }
+  .updated { color: var(--muted); font-size: 13px; margin: 0 0 28px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 28px 0 6px; }
   h2 { font-size: 18px; margin: 32px 0 10px; }
-  p, li { color: #374151; font-size: 15px; }
+  p, li, td { color: #374151; font-size: 15px; }
   ul { padding-left: 20px; }
-  .notice {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-size: 13px;
-    color: #9a3412;
-    margin-bottom: 28px;
-  }
   a { color: var(--accent); }
-  hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+  .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; font-size: 13px; }
+  td { font-size: 14px; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, td { display: block; min-width: 0; }
+    thead { display: none; }
+    tr { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; }
+    td { border: none; padding: 3px 0; }
+    td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+  }
+  .callout { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 12px; padding: 14px 16px; margin: 20px 0; }
+  .callout strong { color: #be123c; }
+  .callout p { margin: 6px 0 0; }
+  blockquote { margin: 16px 0; padding: 14px 16px; border-left: 4px solid var(--accent); background: white; border-radius: 0 12px 12px 0; font-style: italic; color: #374151; }
   .lang-block { display: none; }
   .lang-block.visible { display: block; }
 </style>
@@ -59,131 +47,132 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="brand">Fight<span>OS</span></div>
+    <a class="brand" href="index.html">Fight<span>OS</span></a>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('tr')" id="btn-tr">TR</button>
       <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
     </div>
   </header>
-
-  <!-- ================= TÜRKÇE ================= -->
+  <nav class="docs" id="nav-tr"><a href="terms.html">Kullanım Koşulları</a> <a href="privacy.html" aria-current="page">Gizlilik Politikası</a> <a href="aydinlatma.html">KVKK Aydınlatma Metni</a> <a href="prime.html">Prime Path Abonelik Koşulları</a> <a href="acik-riza.html">Açık Rıza Metni</a> <a href="risk.html">Fiziksel Risk Bilgilendirmesi</a></nav>
+  <nav class="docs" id="nav-en" hidden><a href="terms.html#en">Terms of Use</a> <a href="privacy.html#en" aria-current="page">Privacy Policy</a> <a href="aydinlatma.html#en">KVKK Privacy Notice</a> <a href="prime.html#en">Prime Path Subscription Terms</a> <a href="acik-riza.html#en">Explicit Consent</a> <a href="risk.html#en">Physical Risk Notice</a></nav>
   <div class="lang-block visible" id="block-tr">
-    <div class="notice">
-      Bu belge FightOS ekibi tarafından hazırlanmıştır ve resmi bir hukuki danışmanlık yerine geçmez. Uygulamayı mağazalara sunmadan önce bir avukata gözden geçirtmen önerilir.
-    </div>
     <h1>Gizlilik Politikası</h1>
-    <p class="updated">Son güncelleme: 26 Eylül 2026</p>
-
-    <p>FightOS ("uygulama", "biz") olarak gizliliğine önem veriyoruz. Bu politika, uygulamayı kullanırken hangi bilgileri topladığımızı, bunları nasıl kullandığımızı ve haklarını açıklar.</p>
-
-    <h2>1. Topladığımız Bilgiler</h2>
+    <p class="updated">Son güncelleme: 15 Ekim 2026</p>
+    <p>Bu politika, FightOS uygulamasının (&quot;Uygulama&quot;) hangi kişisel verileri işlediğini, bunları neden ve nasıl işlediğini ve haklarını açıklar. KVKK'nın 10. maddesi kapsamındaki ayrıntılı bilgilendirme için <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>'ni de okuyabilirsin.</p>
+    <h2>1. Veri Sorumlusu ve İletişim</h2>
+    <p>Veri sorumlusu: Ozan Yıldırım (bireysel geliştirici).<br>E-posta: <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
+    <h2>2. Yaş Sınırı</h2>
+    <p>Uygulama 18 yaş ve üzeri kişiler içindir. Uygulama'yı kullanmadan önce yaşın kontrol edilir; doğum yılın yalnızca bu kontrol için cihazında kullanılır, kaydedilmez ve bize gönderilmez. 18 yaşından küçük birine ait bir hesap olduğunu öğrenirsek hesabı ve verilerini sileriz.</p>
+    <h2>3. İşlediğimiz Kişisel Veriler</h2>
     <ul>
-      <li><strong>Hesap bilgileri:</strong> E-posta adresin ve şifren (Supabase Auth aracılığıyla güvenli şekilde saklanır), kendi belirlediğin görünen ad ve nick. Apple veya Google ile giriş yaparsan, bu hizmetlerin paylaştığı e-posta adresini ve (paylaşılırsa) adını alırız; Apple'da "E-postamı Gizle"yi seçersen Apple'ın oluşturduğu aktarma adresi kullanılır. Apple ve Google şifreni bizimle paylaşmaz.</li>
-      <li><strong>Vücut bilgileri (isteğe bağlı):</strong> Kilon, boyun ve yaşın. Kilo tahmini kalori hesabında, yaş hedef nabız aralığında kullanılır. Hesabında saklanır; Profili Yönet &gt; Vücut bilgileri'nden istediğin zaman değiştirebilir ya da silebilirsin. Hesabını silersen bunlar da silinir.</li>
-      <li><strong>Antrenman verileri:</strong> Tamamladığın raund sayısı, seçtiğin disiplin, antrenman süresi, antrenman sonunda verdiğin efor cevabı ve bunlardan hesaplanan tahmini kalori.</li>
-      <li><strong>Abonelik bilgileri:</strong> Aboneliğinin aktif olup olmadığı bilgisi. Kredi kartı bilgilerine biz hiçbir zaman erişmeyiz — ödemeler doğrudan Apple veya Google üzerinden işlenir.</li>
-      <li><strong>Sesli koç metinleri:</strong> AI koçun seslendirdiği kısa antrenman komutları, sesi üretmek için ElevenLabs'a iletilir. Bu metinler kişisel bilgi içermez.</li>
-      <li><strong>Sıralama tablosu ve bildirimler:</strong> Nick'in ve toplam raund sayın, sıralama tablosunda giriş yapmış diğer kullanıcılara görünür (e-postan ve adın görünmez). Bir nick'i bildirirsen, bildirimin (hangi hesabın hangi nick'i hangi nedenle bildirdiği) inceleme için saklanır.</li>
+      <li>Hesap bilgileri: e-posta adresin, şifren (Supabase Auth tarafından şifrelenmiş olarak saklanır; biz göremeyiz), görünen adın ve nick'in. &quot;Apple ile Giriş&quot; veya &quot;Google ile Giriş&quot; kullanırsan bu sağlayıcılardan yalnızca e-posta adresin ve (paylaşılırsa) adın alınır; Apple'da &quot;E-postamı Gizle&quot;yi seçersen Apple'ın oluşturduğu aktarma adresi kullanılır.</li>
+      <li>Antrenman verileri: seçtiğin disiplin, raund sayısı, süre, tempo ve dinlenme süreleri, koçun verdiği komut sayısı, antrenman sonunda verdiğin efor cevabı ve tahmini kalori.</li>
+      <li>Sıralama tablosu: nick'in ve toplam raund sayın, giriş yapmış diğer kullanıcılara görünür. E-postan ve adın görünmez.</li>
+      <li>Nick bildirimleri: bir nick'i bildirirsen, bildirimin (hangi hesabın hangi nick'i hangi nedenle bildirdiği) inceleme için saklanır.</li>
+      <li>Vücut bilgileri (isteğe bağlı, sağlık verisi niteliğinde): kilon, boyun ve yaşın. Yalnızca açık rıza verirsen işlenir (bkz. 4. bölüm).</li>
+      <li>Abonelik: aboneliğinin aktif olup olmadığı ve satın alma işlem bilgileri. Kart bilgilerin bize hiçbir zaman ulaşmaz.</li>
+      <li>Güvenlik kayıtları: hesap kimliği, giriş ve oturum kayıtları (IP adresi dahil), nick değişiklik zamanları.</li>
     </ul>
-
-    <h2>2. Bilgileri Nasıl Kullanıyoruz</h2>
-    <p>Topladığımız bilgileri yalnızca; hesabını yönetmek, antrenman geçmişini ve ilerlemeni göstermek, aboneliğini doğrulamak, AI sesli koçu çalıştırmak ve sıralama tablosundaki nick bildirimlerini incelemek için kullanırız. Bilgilerini üçüncü taraflara satmayız.</p>
-
-    <h2>3. Üçüncü Taraf Servisler</h2>
-    <p>Uygulama şu servisleri kullanır:</p>
+    <h2>4. Sağlık Verisi Niteliğindeki Vücut Bilgileri ve Açık Rıza</h2>
+    <p>Kilo ve boy, kalori ve nabız hesaplarıyla birlikte değerlendirildiğinde KVKK'nın 6. maddesi anlamında sağlık verisi sayılabilir. Bu nedenle kilo, boy ve yaş bilgilerin yalnızca ayrı ve isteğe bağlı açık rızanla işlenir. Bu onay <a href="terms.html">Kullanım Koşulları</a>'nın içine gömülü değildir; vücut bilgileri ekranında ayrı bir kutu olarak sunulur ve işaretlenmemiş olarak gelir.</p>
+    <p>Onay vermezsen Uygulama'nın tüm özelliklerini kullanmaya devam edersin; kalori 70 kg varsayımıyla tahmin edilir ve hedef nabız aralığı gösterilmez. Onayını istediğin zaman Profili Yönet → Vücut bilgileri ekranından geri alabilirsin; bu durumda kilo, boy ve yaş bilgilerin silinir ve geçmiş antrenmanlarının kalorisi 70 kg varsayımıyla yeniden tahmin edilir.</p>
+    <h2>5. Verileri Hangi Amaçlarla Kullanıyoruz</h2>
+    <p>Verilerin yalnızca hesabını yönetmek, antrenman geçmişini ve ilerlemeni göstermek, sıralama tablosunu oluşturmak, aboneliğini doğrulamak, sesli koçu çalıştırmak, nick bildirimlerini incelemek ve hesap ile sistem güvenliğini sağlamak için kullanılır. Hangi verinin hangi hukuki sebebe dayandığı <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>'nde tablo hâlinde gösterilir.</p>
+    <h2>6. Hizmet Sağlayıcılar</h2>
     <ul>
-      <li><strong>Supabase</strong> — hesap yönetimi ve veritabanı</li>
-      <li><strong>Apple ve Google</strong> — "Apple ile giriş" ve "Google ile giriş" seçenekleri (kimlik doğrulama)</li>
-      <li><strong>ElevenLabs</strong> — sesli koç için ses üretimi</li>
-      <li><strong>RevenueCat</strong> — abonelik ve satın alma yönetimi</li>
+      <li>Supabase: hesap, kimlik doğrulama ve veritabanı barındırma (AB, Almanya, Frankfurt).</li>
+      <li>RevenueCat (ABD): abonelik ve satın alma yönetimi. Adın, e-postan ve hesap kimliğin iletilmez; anonim bir kimlik kullanılır.</li>
+      <li>Apple ve Google: &quot;Apple ile Giriş&quot;, &quot;Google ile Giriş&quot;, App Store ve Google Play ödemeleri.</li>
+      <li>ElevenLabs (ABD): sesli koç için ses üretimi. Yalnızca sabit antrenman komutlarının metni sunucumuz üzerinden gönderilir; kişisel veri içermez.</li>
     </ul>
-    <p>Bu servisler kendi gizlilik politikalarına tabidir.</p>
-
-    <h2>4. Reklam ve Takip</h2>
-    <p>FightOS'ta reklam yoktur ve üçüncü taraf reklam takip sistemleri kullanılmaz.</p>
-
-    <h2>5. Veri Güvenliği</h2>
-    <p>Verilerin, sektör standardı şifreleme ve erişim kontrolleriyle korunur. Ancak internet üzerinden hiçbir aktarımın %100 güvenli olmadığını unutma.</p>
-
-    <h2>6. Veri Saklama ve Hesap Silme</h2>
-    <p>Hesabını istediğin zaman uygulama içinden silebilirsin: Profili Yönet ekranındaki Hesabı Sil seçeneği. Silme işlemi hesabını, antrenman geçmişini ve ilerlemeni kalıcı olarak kaldırır ve geri alınamaz. App Store aboneliğin bu işlemle iptal edilmez; Apple Kimliğinin abonelik ayarlarından ayrıca iptal etmen gerekir. Uygulamaya erişemiyorsan silme talebini <a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a> adresine de iletebilirsin.</p>
-
-    <h2>7. Çocukların Gizliliği</h2>
-    <p>FightOS, 13 yaşın altındaki çocuklar için tasarlanmamıştır ve onlardan bilerek veri toplamayız.</p>
-
-    <h2>8. Haklarınız</h2>
-    <p>Verilerine erişme, düzeltme veya silme hakkına sahipsin. Bu haklarını kullanmak için bizimle iletişime geçebilirsin.</p>
-
-    <h2>9. Değişiklikler</h2>
-    <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde seni uygulama içinden bilgilendireceğiz.</p>
-
-    <h2>10. İletişim</h2>
-    <p><a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+    <h2>7. Yurt Dışına Veri Aktarımı</h2>
+    <p>Verilerin Supabase'in Avrupa Birliği'ndeki (Almanya, Frankfurt) sunucularında saklanır; abonelik bilgileri RevenueCat (ABD) tarafından işlenir. Bu işlemler KVKK'nın 9. maddesi kapsamında yurt dışına kişisel veri aktarımıdır. Bu sağlayıcılar, veri işleme sözleşmeleri çerçevesinde verilerini yalnızca bizim adımıza ve hizmetin sunulması amacıyla işler; bu sözleşmeler Avrupa Komisyonu'nun standart sözleşme maddelerini içerir. Vücut bilgilerinin işlenmesi ve bu amaçla yurt dışında saklanması için ayrıca açık rızan alınır. Ayrıntılar için <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>'ne bakabilirsin.</p>
+    <h2>8. Saklama Süreleri</h2>
+    <ul>
+      <li>Hesap bilgileri, antrenman kayıtları, sıralama bilgileri ve onay kayıtları: hesabını silene kadar.</li>
+      <li>Vücut bilgileri: açık rızanı geri alana veya hesabını silene kadar.</li>
+      <li>Nick bildirimleri: 6 ay; sonra otomatik olarak silinir.</li>
+      <li>Nick değişiklik zamanları: 30 gün.</li>
+      <li>Giriş ve oturum kayıtları (IP adresi dahil): 90 gün.</li>
+    </ul>
+    <h2>9. Veri Güvenliği</h2>
+    <p>Verilerin aktarım sırasında şifreli (HTTPS) iletilir ve veritabanında satır düzeyinde güvenlik (Row Level Security) kurallarıyla korunur: her kullanıcı yalnızca kendi verilerine erişebilir. Bununla birlikte internet üzerinden hiçbir aktarımın tamamen güvenli olduğu garanti edilemez.</p>
+    <h2>10. Reklam ve Takip</h2>
+    <p>FightOS'ta reklam yoktur. Verilerin satılmaz, reklam veya pazarlama amacıyla paylaşılmaz; Uygulama seni diğer uygulama ve sitelerde izlemez.</p>
+    <h2>11. KVKK Kapsamındaki Hakların ve Başvuru</h2>
+    <p>KVKK'nın 11. maddesi uyarınca kişisel verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, işleme amacını öğrenme, aktarıldığı üçüncü kişileri bilme, düzeltilmesini ve silinmesini isteme, bu işlemlerin üçüncü kişilere bildirilmesini isteme, otomatik analiz sonucu aleyhine çıkan sonuca itiraz etme ve zararının giderilmesini talep etme haklarına sahipsin. Haklarının tam listesi ve başvuru yöntemi <a href="aydinlatma.html">KVKK Aydınlatma Metni</a>'nde yer alır.</p>
+    <p>Başvurunu Uygulama'da kayıtlı e-posta adresinden <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a> adresine yazarak iletebilirsin. Başvurun en geç 30 gün içinde ücretsiz sonuçlandırılır. Sonuçtan memnun kalmazsan KVKK m.14 uyarınca Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsin.</p>
+    <h2>12. Hesap Silme ve Abonelik</h2>
+    <p>Hesabını istediğin zaman Uygulama içinden silebilirsin: Profili Yönet → Hesabı Sil. Silme işlemi hesabını, antrenman geçmişini, vücut bilgilerini ve ilerlemeni kalıcı olarak kaldırır ve geri alınamaz. Uygulama'ya erişemiyorsan silme talebini <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a> adresine de iletebilirsin.</p>
+    <p>Hesabını silmek aboneliğini iptal etmez. Aboneliğin App Store üzerindense iPhone'unda Ayarlar → Apple Kimliğin → Abonelikler bölümünden, Google Play üzerindense Google Play → Profil → Ödemeler ve abonelikler → Abonelikler bölümünden ayrıca iptal etmelisin. Ayrıntılar: <a href="prime.html">Prime Path Abonelik Koşulları</a>.</p>
+    <h2>13. Değişiklikler</h2>
+    <p>Bu politika zaman zaman güncellenebilir. Güncel sürüm her zaman bu sayfada yayınlanır ve yukarıdaki &quot;Son güncelleme&quot; tarihi değişir. Önemli değişikliklerde Uygulama içinden bilgilendirilirsin.</p>
   </div>
-
-  <!-- ================= ENGLISH ================= -->
   <div class="lang-block" id="block-en">
-    <div class="notice">
-      This document was drafted by the FightOS team and does not constitute formal legal advice. We recommend having it reviewed by a lawyer before submitting the app to the stores.
-    </div>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 26, 2026</p>
-
-    <p>At FightOS ("the app", "we"), we take your privacy seriously. This policy explains what information we collect while you use the app, how we use it, and your rights.</p>
-
-    <h2>1. Information We Collect</h2>
+    <p class="updated">Last updated: October 15, 2026</p>
+    <p>This policy explains what personal data the FightOS app (the &quot;App&quot;) processes, why and how, and your rights. For the detailed notice under Article 10 of the KVKK, see also the <a href="aydinlatma.html#en">KVKK Privacy Notice</a>.</p>
+    <h2>1. Data Controller and Contact</h2>
+    <p>Data controller: Ozan Yıldırım (individual developer).<br>Email: <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a></p>
+    <h2>2. Age Requirement</h2>
+    <p>The App is for people aged 18 and over. Your age is checked before you use the App; your birth year is only used for this check on your device and isn't saved or sent to us. If we learn that an account belongs to someone under 18, we delete the account and its data.</p>
+    <h2>3. Personal Data We Process</h2>
     <ul>
-      <li><strong>Account information:</strong> Your email and password (securely stored via Supabase Auth), your self-chosen display name and nickname. If you sign in with Apple or Google, we receive the email address (and, if shared, the name) those services provide; if you choose "Hide My Email" with Apple, the relay address Apple generates is used. Apple and Google never share your password with us.</li>
-      <li><strong>Body information (optional):</strong> Your weight, height and age. Weight is used to estimate calories and age to show a target heart rate range. They are stored in your account; you can change or delete them anytime under Manage Profile &gt; Body info. Deleting your account deletes them too.</li>
-      <li><strong>Workout data:</strong> Rounds completed, discipline selected, workout duration, the effort answer you give after a workout, and the estimated calories calculated from these.</li>
-      <li><strong>Subscription information:</strong> Whether your subscription is active. We never have access to your credit card details — payments are processed directly by Apple or Google.</li>
-      <li><strong>Voice coach text:</strong> Short workout cues spoken by the AI coach are sent to ElevenLabs to generate audio. This text contains no personal information.</li>
-      <li><strong>Leaderboard and reports:</strong> Your nickname and total rounds are visible to other signed-in users on the leaderboard (your email and name are not). If you report a nickname, the report (which account reported which nickname and why) is stored so we can review it.</li>
+      <li>Account information: your email address, your password (stored encrypted by Supabase Auth; we can't see it), your display name and nickname. If you use &quot;Sign in with Apple&quot; or &quot;Sign in with Google&quot;, we receive only your email address and (if shared) your name from these providers; if you choose &quot;Hide My Email&quot; with Apple, the relay address Apple generates is used.</li>
+      <li>Workout data: the discipline you choose, rounds, duration, pace and rest times, the number of coach cues, the effort answer you give after a workout, and estimated calories.</li>
+      <li>Leaderboard: your nickname and total rounds are visible to other signed-in users. Your email and name are not.</li>
+      <li>Nickname reports: if you report a nickname, the report (which account reported which nickname and why) is stored for review.</li>
+      <li>Body information (optional, may be health data): your weight, height and age. Processed only with your explicit consent (see Section 4).</li>
+      <li>Subscription: whether your subscription is active and purchase transaction details. Your card details never reach us.</li>
+      <li>Security records: account ID, sign-in and session records (including IP address), nickname change times.</li>
     </ul>
-
-    <h2>2. How We Use Information</h2>
-    <p>We use the information we collect only to manage your account, show your workout history and progress, verify your subscription, power the AI voice coach, and review reports about nicknames. We do not sell your information to third parties.</p>
-
-    <h2>3. Third-Party Services</h2>
-    <p>The app relies on the following services:</p>
+    <h2>4. Body Information as Health Data and Explicit Consent</h2>
+    <p>Weight and height, combined with calorie and heart rate calculations, may count as health data under Article 6 of the KVKK. Your weight, height and age are therefore processed only with your separate, optional explicit consent. This consent is not buried in the <a href="terms.html#en">Terms of Use</a>; it is offered as a separate, unchecked box on the body info screen.</p>
+    <p>If you don't consent, you can keep using every feature of the App; calories are estimated assuming 70 kg and no target heart rate range is shown. You can withdraw consent at any time on the Manage Profile → Body info screen; your weight, height and age are then deleted and your past workouts' calories are re-estimated assuming 70 kg.</p>
+    <h2>5. How We Use Data</h2>
+    <p>Your data is used only to manage your account, show your workout history and progress, build the leaderboard, verify your subscription, run the voice coach, review nickname reports, and keep your account and our systems secure. The legal basis for each type of data is shown in a table in the <a href="aydinlatma.html#en">KVKK Privacy Notice</a>.</p>
+    <h2>6. Service Providers</h2>
     <ul>
-      <li><strong>Supabase</strong> — account management and database</li>
-      <li><strong>Apple and Google</strong> — "Sign in with Apple" and "Sign in with Google" (authentication)</li>
-      <li><strong>ElevenLabs</strong> — voice generation for the AI coach</li>
-      <li><strong>RevenueCat</strong> — subscription and purchase management</li>
+      <li>Supabase: account, authentication and database hosting (EU, Frankfurt, Germany).</li>
+      <li>RevenueCat (USA): subscription and purchase management. Your name, email and account ID are not sent; an anonymous ID is used.</li>
+      <li>Apple and Google: &quot;Sign in with Apple&quot;, &quot;Sign in with Google&quot;, App Store and Google Play payments.</li>
+      <li>ElevenLabs (USA): voice generation for the coach. Only the text of fixed workout cues is sent, through our server; it contains no personal data.</li>
     </ul>
-    <p>These services are governed by their own privacy policies.</p>
-
-    <h2>4. Advertising & Tracking</h2>
-    <p>FightOS contains no advertising and does not use third-party advertising trackers.</p>
-
-    <h2>5. Data Security</h2>
-    <p>Your data is protected with industry-standard encryption and access controls. However, no transmission over the internet is ever 100% secure.</p>
-
-    <h2>6. Data Retention & Account Deletion</h2>
-    <p>You can delete your account at any time from within the app: the Delete Account option in Manage Profile. Deletion permanently removes your account, workout history and progress and cannot be undone. Your App Store subscription is not cancelled by this; you need to cancel it separately in your Apple ID subscription settings. If you cannot access the app, you can also send a deletion request to <a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a>.</p>
-
-    <h2>7. Children's Privacy</h2>
-    <p>FightOS is not designed for children under the age of 13, and we do not knowingly collect data from them.</p>
-
-    <h2>8. Your Rights</h2>
-    <p>You have the right to access, correct, or delete your data. Contact us to exercise these rights.</p>
-
-    <h2>9. Changes</h2>
-    <p>We may update this policy from time to time. We will notify you in-app of any significant changes.</p>
-
-    <h2>10. Contact</h2>
-    <p><a href="mailto:ozanyyildirim33@gmail.com">ozanyyildirim33@gmail.com</a></p>
+    <h2>7. Transfers Abroad</h2>
+    <p>Your data is stored on Supabase servers in the European Union (Frankfurt, Germany); subscription data is processed by RevenueCat (USA). These are transfers of personal data abroad under Article 9 of the KVKK. These providers process your data only on our behalf and to provide the service, under data processing agreements that incorporate the European Commission's standard contractual clauses. Processing your body information and storing it abroad for that purpose additionally require your explicit consent. See the <a href="aydinlatma.html#en">KVKK Privacy Notice</a> for details.</p>
+    <h2>8. Retention</h2>
+    <ul>
+      <li>Account information, workout records, leaderboard data and acceptance records: until you delete your account.</li>
+      <li>Body information: until you withdraw consent or delete your account.</li>
+      <li>Nickname reports: 6 months, then deleted automatically.</li>
+      <li>Nickname change times: 30 days.</li>
+      <li>Sign-in and session records (including IP address): 90 days.</li>
+    </ul>
+    <h2>9. Data Security</h2>
+    <p>Your data is encrypted in transit (HTTPS) and protected in the database by Row Level Security rules: each user can access only their own data. Still, no transmission over the internet can be guaranteed to be completely secure.</p>
+    <h2>10. Advertising &amp; Tracking</h2>
+    <p>FightOS has no ads. Your data is never sold or shared for advertising or marketing, and the App does not track you across other apps and websites.</p>
+    <h2>11. Your Rights under the KVKK and How to Apply</h2>
+    <p>Under Article 11 of the KVKK you have the right to learn whether your personal data is processed, request information, learn the purpose of processing, know the third parties it is transferred to, request correction and deletion, request that these be notified to third parties, object to a result against you from automated analysis, and claim compensation. The full list of your rights and how to apply are in the <a href="aydinlatma.html#en">KVKK Privacy Notice</a>.</p>
+    <p>You can apply by writing to <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a> from the email address registered in the App. Your request will be answered free of charge within 30 days at the latest. If you're not satisfied with the outcome, you may file a complaint with the Personal Data Protection Board under KVKK Art. 14.</p>
+    <h2>12. Account Deletion and Subscriptions</h2>
+    <p>You can delete your account at any time from within the App: Manage Profile → Delete Account. Deletion permanently removes your account, workout history, body information and progress and cannot be undone. If you can't access the App, you can also send a deletion request to <a href="mailto:destek@fightos.com.tr">destek@fightos.com.tr</a>.</p>
+    <p>Deleting your account does not cancel your subscription. If you subscribed through the App Store, cancel it on your iPhone in Settings → your Apple ID → Subscriptions; if through Google Play, in Google Play → your profile → Payments &amp; subscriptions → Subscriptions. Details: <a href="prime.html#en">Prime Path Subscription Terms</a>.</p>
+    <h2>13. Changes</h2>
+    <p>This policy may be updated from time to time. The current version is always published on this page and the &quot;Last updated&quot; date above changes. We will notify you in the App of any significant changes.</p>
   </div>
 </div>
-
 <script>
   function setLang(lang) {
-    document.getElementById('block-tr').classList.toggle('visible', lang === 'tr');
-    document.getElementById('block-en').classList.toggle('visible', lang === 'en');
-    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    for (const l of ['tr', 'en']) {
+      document.getElementById('block-' + l).classList.toggle('visible', l === lang);
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      document.getElementById('nav-' + l).hidden = l !== lang;
+    }
+    document.documentElement.lang = lang;
+    history.replaceState(null, '', lang === 'en' ? '#en' : location.pathname);
   }
+  if (location.hash === '#en') setLang('en');
 </script>
 </body>
 </html>
